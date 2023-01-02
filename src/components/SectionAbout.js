@@ -6,7 +6,10 @@ import collaboration from "../assets/images/collaboration.jpg"
 
 export default function About() {
   return (
-    <div className="section-container section-about h-screen">
+    <div className="section-container section-about">
+      <div className="inner-container">
+        <h2 className="text-6xl text-white title-section">Who I am</h2>
+      </div>
       <div className="inner-container flex flex-wrap justify-center items-center">
         <div
           className="item-trait w-2/4"

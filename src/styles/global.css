@@ -14,13 +14,25 @@
   margin: 0;
 }
 :root {
-  --primary-color: #011f4b;
+  --primary-color: 	#003083;
 }
 html {
   font-size: 16px;
 }
 body {
   background-color: #0e1212;
+}
+.header {
+  z-index: 1;
+}
+
+.video-bg {
+  max-height: 100%;
+    height: 100vh;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 .inner-container {
     width: 100%;
@@ -29,13 +41,32 @@ body {
     margin: auto;
   }
 
-  .section-about .inner-container {
+  .title-section {
+    margin-bottom: 35px;
+  }
+  .section-about {
+    padding: 85px 0;
+    min-height: 100vh;
+  }
+  .section-about .inner-container,
+  .section-skill .inner-container {
     max-width: 1000px;
+  }
+
+  .section-skill {
+    padding: 85px 0;
   }
 
   .item-trait {
     position: relative;
     padding-bottom: 33%;
+  }
+
+  .item-skill {
+    padding: 7px 20px;
+    border-radius: 15px;
+    border: 1px solid var(--primary-color);
+    margin-right: 15px;
   }
 
   .overlay-trait {
