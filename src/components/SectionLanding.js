@@ -44,6 +44,8 @@ export default function Landing() {
           <FontAwesomeIcon icon={faGithub} size="2x" />
         </a>
       </div>
+
+      <div className="figure-1" />
     </div>
   )
 }
