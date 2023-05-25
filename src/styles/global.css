@@ -89,6 +89,14 @@ ul {
 header {
   width: 100%;
   position: fixed;
+  background-color: #fff;
+  -webkit-transition: 0.2s ease-in-out all;
+  transition: 0.2s ease-in-out all;
+}
+
+.header--sticky {
+  -webkit-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.1);
 }
 
 .header .container {
