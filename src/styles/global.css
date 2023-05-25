@@ -123,6 +123,22 @@ header {
   width: 100%;
 }
 
+/* landing */
+
+.container--sns-top {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item--sns {
+  margin: 0 10px;
+}
 /* about */
 
 .container--section-about {

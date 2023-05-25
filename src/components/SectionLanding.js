@@ -1,5 +1,12 @@
 import React from "react"
 import backgroundVideo from "../assets/videos/test.mp4"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
+// import {
+//   faLinkedIn
+// } from '@fortawesome/free-brands-svg-icons'
+
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
 
 export default function Landing() {
   return (
@@ -10,9 +17,20 @@ export default function Landing() {
       <div className="container">
         <h1 className="header--title text-8xl">SEUNGJUN LEE</h1>
 
-        <h2 className="text-6xl pt-2">FRONT-END DEVELOPER <span className="primary-text">.</span></h2>
+        <h2 className="text-6xl pt-2">
+          FRONT-END DEVELOPER <span className="primary-text">.</span>
+        </h2>
 
         <a className="btn--tino">Learn More</a>
+      </div>
+
+      <div className="container--sns-top">
+        <a className="item--sns d-flex" href="#" target="_blank">
+          <FontAwesomeIcon icon={faLinkedin} size="2x" />
+        </a>
+        <a className="item--sns d-flex" href="#" target="_blank">
+          <FontAwesomeIcon icon={faGithub} size="2x" />
+        </a>
       </div>
     </div>
   )
