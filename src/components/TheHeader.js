@@ -18,20 +18,20 @@ export default function Header() {
         </div>
 
         <ul className="menu--list-top flex">
-          <li className="menu--item inline-block mx-3.5" href="#about">
-            <a className="py-5">About</a>
+          <li className="menu--item inline-block mx-3.5">
+            <a className="py-5" href="#about">About</a>
           </li>
 
           <li className="menu--item inline-block mx-3.5" href="#work">
-            <a className="py-5">Work</a>
+            <a className="py-5" href="#work">Work</a>
           </li>
 
           <li className="menu--item inline-block mx-3.5" href="#project">
-            <a className="py-5">Project</a>
+            <a className="py-5" href="#project">Project</a>
           </li>
 
           <li className="menu--item inline-block mx-3.5" href="#contact">
-            <a className="py-5">Contact</a>
+            <a className="py-5" href="#contact">Contact</a>
           </li>
           {/* <a
             className="menu-item inline-block py-5 mx-3.5 text-white"

@@ -1,5 +1,5 @@
 import React from "react"
-import backgroundVideo from "../assets/videos/test.mp4"
+// import backgroundVideo from "../assets/videos/test.mp4"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 // import {
@@ -21,14 +21,26 @@ export default function Landing() {
           FRONT-END DEVELOPER <span className="primary-text">.</span>
         </h2>
 
-        <a className="btn--tino">Learn More</a>
+        <a className="btn--tino" href="#about">
+          Learn More
+        </a>
       </div>
 
       <div className="container--sns-top">
-        <a className="item--sns d-flex" href="#" target="_blank">
+        <a
+          className="item--sns d-flex"
+          href="www.linkedin.com/in/seungjun-martin-lee-tino-dev"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FontAwesomeIcon icon={faLinkedin} size="2x" />
         </a>
-        <a className="item--sns d-flex" href="#" target="_blank">
+        <a
+          className="item--sns d-flex"
+          href="https://github.com/tinodevclumsy"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FontAwesomeIcon icon={faGithub} size="2x" />
         </a>
       </div>

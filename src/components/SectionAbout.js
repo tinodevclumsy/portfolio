@@ -1,8 +1,8 @@
 import React from "react"
-import problemSolving from "../assets/images/problem-solving.jpg"
-import criticalThinking from "../assets/images/critical-thinking.jpg"
-import responsiveWebsite from "../assets/images/responsive.jpg"
-import collaboration from "../assets/images/collaboration.jpg"
+// import problemSolving from "../assets/images/problem-solving.jpg"
+// import criticalThinking from "../assets/images/critical-thinking.jpg"
+// import responsiveWebsite from "../assets/images/responsive.jpg"
+// import collaboration from "../assets/images/collaboration.jpg"
 
 export default function About() {
   return (
