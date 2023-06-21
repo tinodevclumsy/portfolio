@@ -77,6 +77,11 @@ ul {
   transition: 0.2s ease-in-out all;
 }
 
+.btn--tino-white {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
 .btn--tino:hover {
   color: #fff;
   background-color: #000;
@@ -194,6 +199,12 @@ header {
   margin: 10px;
   border-radius: 5px;
   text-align: center;
+}
+
+/* experience */
+
+.container--section-experience {
+  padding: 35px 0 75px;
 }
 /* .title-section {
   margin-bottom: 35px;
