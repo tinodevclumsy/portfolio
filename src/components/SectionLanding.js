@@ -1,19 +1,10 @@
 import React from "react"
-// import backgroundVideo from "../assets/videos/test.mp4"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-
-// import {
-//   faLinkedIn
-// } from '@fortawesome/free-brands-svg-icons'
-
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
 
 export default function Landing() {
   return (
     <div className="container--section container--section-landing section-landing h-screen flex justify-center items-center">
-      {/* <video className="absolute video-bg" autoPlay muted loop id="myVideo">
-        <source src={backgroundVideo} type="video/mp4" />
-      </video> */}
       <div className="container">
         <h1 className="header--title text-8xl">SEUNGJUN LEE</h1>
 

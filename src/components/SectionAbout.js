@@ -1,17 +1,19 @@
 import React from "react"
-// import problemSolving from "../assets/images/problem-solving.jpg"
-// import criticalThinking from "../assets/images/critical-thinking.jpg"
-// import responsiveWebsite from "../assets/images/responsive.jpg"
-// import collaboration from "../assets/images/collaboration.jpg"
-// "@fortawesome/free-regular-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPuzzlePiece } from "@fortawesome/free-solid-svg-icons"
+import { faCode } from "@fortawesome/free-solid-svg-icons"
+
 export default function About() {
   return (
-    <div>
+    <div id="about">
       <div className="container--section container--section-about">
         <div className="container">
           <div className="container--content m-auto text-center">
+            <FontAwesomeIcon
+              className="mb-5 text-white"
+              icon={faCode}
+              size="3x"
+            />
+
             <h2 className="header--title text-5xl pb-5 text-white">
               HI There,
             </h2>
@@ -30,76 +32,13 @@ export default function About() {
               and other front-end frameworks gives me a strong foundation to
               build upon.
             </p>
+
+            <a className="btn--tino btn--tino-white" href="#contact">
+              Contact Me
+            </a>
           </div>
         </div>
       </div>
-
-      {/* <div className="container">
-        <div className="container--item-trait">
-          <div className="item--trait">
-            <FontAwesomeIcon icon={faPuzzlePiece} size="4xl"/>
-          </div>
-        </div>
-      </div> */}
     </div>
-    // <div className="section-container section-about">
-    //   <div className="inner-container">
-    //     <h2 className="text-6xl text-white title-section">Who I am</h2>
-    //   </div>
-    //   <div className="inner-container flex flex-wrap justify-center items-center">
-    //     <div
-    //       className="item-trait w-2/4"
-    //       style={{
-    //         backgroundImage: `url(${problemSolving})`,
-    //         backgroundPosition: "center",
-    //         backgroundSize: "cover",
-    //         backgroundRepeat: "no-repeat",
-    //       }}
-    //     >
-    //       <div className="overlay-trait">
-    //         <h3 className="title-trait">Problem Solving</h3>
-    //       </div>
-    //     </div>
-    //     <div
-    //       className="item-trait w-2/4"
-    //       style={{
-    //         backgroundImage: `url(${criticalThinking})`,
-    //         backgroundPosition: "center",
-    //         backgroundSize: "cover",
-    //         backgroundRepeat: "no-repeat",
-    //       }}
-    //     >
-    //       <div className="overlay-trait">
-    //         <h3 className="title-trait">Critical Thinking</h3>
-    //       </div>
-    //     </div>
-    //     <div
-    //       className="item-trait w-2/4"
-    //       style={{
-    //         backgroundImage: `url(${collaboration})`,
-    //         backgroundPosition: "center",
-    //         backgroundSize: "cover",
-    //         backgroundRepeat: "no-repeat",
-    //       }}
-    //     >
-    //       <div className="overlay-trait">
-    //         <h3 className="title-trait">Collaborative</h3>
-    //       </div>
-    //     </div>
-    //     <div
-    //       className="item-trait w-2/4"
-    //       style={{
-    //         backgroundImage: `url(${responsiveWebsite})`,
-    //         backgroundPosition: "center",
-    //         backgroundSize: "cover",
-    //         backgroundRepeat: "no-repeat",
-    //       }}
-    //     >
-    //       <div className="overlay-trait">
-    //         <h3 className="title-trait">Responsive Website</h3>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   )
 }

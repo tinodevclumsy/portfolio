@@ -179,6 +179,22 @@ header {
   max-width: 850px;
   margin: auto;
 }
+
+/* skill */
+
+.container--section-skill {
+  padding: 115px 0;
+}
+
+.item-skill {
+  padding: 15px;
+  width: calc(20% - 20px);
+  /* border: 1px solid; */
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+  margin: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
 /* .title-section {
   margin-bottom: 35px;
 }
