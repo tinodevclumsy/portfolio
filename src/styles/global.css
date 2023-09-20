@@ -5,7 +5,8 @@
 *,
 :after,
 :before {
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Schoolbell", cursive;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-width: 0;
@@ -14,7 +15,7 @@
   margin: 0;
 }
 :root {
-  --primary-color: #003083;
+  --primary-color: #66a1ee;
 }
 
 .primary-text {
@@ -22,6 +23,7 @@
 }
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 a {
   text-decoration: none !important;
@@ -77,6 +79,23 @@ ul {
   transition: 0.2s ease-in-out all;
 }
 
+.btn--external {
+  display: inline-block;
+  color: var(--primary-color);
+  padding: 5px 10px;
+  border: 1px solid var(--primary-color);
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+  -webkit-transition: 0.2s ease-in-out all;
+  transition: 0.2s ease-in-out all;
+}
+
+.btn--external:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
 .btn--tino-white {
   color: #fff;
   border: 1px solid #fff;
@@ -112,7 +131,7 @@ header {
 }
 
 .container--logo {
-  max-width: 125px;
+  max-width: 75px;
 }
 .menu--item a {
   position: relative;
@@ -158,21 +177,14 @@ header {
   margin: 0 10px;
 }
 
-.figure-1 {
-  position: absolute;
-  width: 100%;
-  height: 100px;
-  right: -35%;
-  bottom: 0;
-  background-color: var(--primary-color);
-  transform: rotate(-45deg);
+.animation-main {
+  max-width: 350px;
 }
+
 /* about */
 
 .container--section-about {
   padding: 75px 0;
-  color: #d0d0d0;
-  background-color: var(--primary-color);
 }
 
 .container--section-about .container {
@@ -189,12 +201,14 @@ header {
 
 .container--section-skill {
   padding: 115px 0;
+  background-color: var(--primary-color);
 }
 
 .item-skill {
   padding: 15px;
-  width: calc(20% - 20px);
+  width: calc(25% - 20px);
   /* border: 1px solid; */
+  color: #fff;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
   margin: 10px;
   border-radius: 5px;
@@ -252,3 +266,49 @@ header {
   text-transform: uppercase;
   letter-spacing: 10px;
 } */
+
+.item-experience ul li {
+  position: relative;
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.item-experience ul li::before {
+  content: "•";
+  position: absolute;
+  top: 0;
+  left: -0;
+}
+
+.animation-exp {
+  max-width: 400px;
+  margin: auto;
+}
+
+.item--badge {
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 3px;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.container--section-contact {
+  padding: 75px 0;
+}
+
+.title-contact {
+  max-width: 800px;
+}
+
+.icon--contact {
+  width: 75px;
+  height: 75px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  margin: 40px auto;
+}

@@ -1,26 +1,27 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
+import Lottie from "lottie-react"
+import smilieAnimation from "../assets/smile.json"
 
 export default function Landing() {
   return (
     <div className="container--section container--section-landing section-landing h-screen flex justify-center items-center">
-      <div className="container">
+      <div className="container flex flex-col items-center">
         <h1 className="header--title text-8xl">SEUNGJUN LEE</h1>
 
         <h2 className="text-6xl pt-2">
-          FRONT-END DEVELOPER <span className="primary-text">.</span>
+          FRONT-END DEVELOPER
         </h2>
 
-        <a className="btn--tino" href="#about">
-          Learn More
-        </a>
+        <Lottie animationData={smilieAnimation} className="animation-main" />
+
       </div>
 
       <div className="container--sns-top">
         <a
           className="item--sns d-flex"
-          href="www.linkedin.com/in/seungjun-martin-lee-tino-dev"
+          href="https://www.linkedin.com/in/seungjun-martin-lee-tinodevclumsy/"
           target="_blank"
           rel="noreferrer"
         >
@@ -35,8 +36,6 @@ export default function Landing() {
           <FontAwesomeIcon icon={faGithub} size="2x" />
         </a>
       </div>
-
-      <div className="figure-1" />
     </div>
   )
 }
