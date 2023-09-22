@@ -1,5 +1,52 @@
 import React, { useState, useEffect } from "react"
 import logo from "../assets/images/logo.png"
+import styled, { css } from "styled-components"
+
+const StyledHeader = styled.header`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 100;
+  -webkit-transition: 0.2s ease-in-out all;
+  transition: 0.2s ease-in-out all;
+
+  ${props =>
+    props.sticky &&
+    css`
+      -webkit-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.1);
+    `}
+`
+
+const MenuItem = styled.a`
+  position: relative;
+
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &:before {
+    height: 2px;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 0;
+    background: var(--primary-color);
+    -webkit-transition: 0.2s ease-in-out all;
+    transition: 0.2s ease-in-out all;
+  }
+`
+
+const Logo = styled.div`
+  max-width: 75px;
+`
 
 export default function Header() {
   const [scrollPosition, setScrollPosition] = useState(0)
@@ -11,80 +58,41 @@ export default function Header() {
   })
 
   return (
-    <header
-      className={
-        scrollPosition > 0
-          ? "header--sticky header fixed top-0 left-0 w-full"
-          : "header fixed top-0 left-0 w-full"
-      }
+    <StyledHeader
+      sticky={scrollPosition > 0}
+      className="header"
     >
       <div className="container flex justify-between items-center">
-        <div className="container--image container--logo">
-          <img src={logo} alt="Logo" />
-        </div>
+        <Logo>
+          <img src={logo} alt="Seungjun Lee's Portfolio Website - Logo" />
+        </Logo>
 
         <ul className="menu--list-top flex">
           <li className="menu--item inline-block mx-3.5">
-            <a className="py-5" href="#about">
+            <MenuItem className="py-5" href="#about">
               About
-            </a>
+            </MenuItem>
           </li>
 
           <li className="menu--item inline-block mx-3.5">
-            <a className="py-5" href="#skill">
+            <MenuItem className="py-5" href="#skill">
               Skill
-            </a>
+            </MenuItem>
           </li>
 
           <li className="menu--item inline-block mx-3.5">
-            <a className="py-5" href="#work-project">
+            <MenuItem className="py-5" href="#work-project">
               Work/Project
-            </a>
+            </MenuItem>
           </li>
 
           <li className="menu--item inline-block mx-3.5">
-            <a className="py-5" href="#contact">
+            <MenuItem className="py-5" href="#contact">
               Contact
-            </a>
+            </MenuItem>
           </li>
-          {/* <a
-            className="menu-item inline-block py-5 mx-3.5 text-white"
-            href="#home"
-          >
-            Home
-          </a>
-          <a
-            className="menu-item inline-block py-5 mx-3.5 text-white"
-            href="#about"
-          >
-            About
-          </a>
-          <a
-            className="menu-item inline-block py-5 mx-3.5 text-white"
-            href="#skill"
-          >
-            Skill
-          </a>
-          <a
-            className="menu-item inline-block py-5 mx-3.5 text-white"
-            href="#work"
-          >
-            Work
-          </a>
-          <a
-            className="menu-item inline-block py-5 mx-3.5 text-white"
-            href="#project"
-          >
-            Project
-          </a>
-          <a
-            className="menu-item inline-block py-5 mx-3.5 text-white"
-            href="#contact"
-          >
-            Contact
-          </a> */}
         </ul>
       </div>
-    </header>
+    </StyledHeader>
   )
 }

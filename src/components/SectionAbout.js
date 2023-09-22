@@ -1,4 +1,5 @@
 import React from "react"
+import StyledButton from "./StyledButton"
 
 export default function About() {
   return (
@@ -7,7 +8,7 @@ export default function About() {
         <div className="container">
           <div className="container--content m-auto text-center">
             <h2 className="text-4xl mb-2">Hi There!</h2>
-            <p className="description">
+            <p>
               I am a skilled and dedicated developer with over 2 years of
               professional experience. My expertise lies in front-end web
               development, with proficiency in HTML, CSS, JavaScript, Vue.js,
@@ -26,9 +27,7 @@ export default function About() {
               gives me a strong foundation to build upon.
             </p>
 
-            <a className="btn--tino btn--tino" href="#contact">
-              Contact Me
-            </a>
+            <StyledButton message='Contact Me' link='#contact'/>
           </div>
         </div>
       </div>

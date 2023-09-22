@@ -6,7 +6,7 @@ import smilieAnimation from "../assets/smile.json"
 
 export default function Landing() {
   return (
-    <div className="container--section container--section-landing section-landing h-screen flex justify-center items-center">
+    <div className="container--section container--section-landing section-landing relative h-screen flex justify-center items-center overflow-hidden">
       <div className="container flex flex-col items-center">
         <h1 className="header--title text-8xl">SEUNGJUN LEE</h1>
 
@@ -18,7 +18,7 @@ export default function Landing() {
 
       </div>
 
-      <div className="container--sns-top">
+      <div className="container--sns-top absolute flex justify-center items-center">
         <a
           className="item--sns d-flex"
           href="https://www.linkedin.com/in/seungjun-martin-lee-tinodevclumsy/"

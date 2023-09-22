@@ -6,15 +6,12 @@ import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
 
 export default function Experience() {
   return (
-    <div id="work-project" className="container--section container--section-experience">
+    <div
+      id="work-project"
+      className="container--section container--section-experience"
+    >
       <div className="container">
         <Lottie animationData={experienceAnimation} className="animation-exp" />
-
-        {/* <div className="header--title mb-8">
-          <h2 className="text-5xl title-section">
-            What I experience <span className="primary-text">.</span>
-          </h2>
-        </div> */}
         <div className="inner-container flex mb-6">
           <div className="item-screenshot w-1/2"></div>
           <div className="item-experience w-1/2">
@@ -22,12 +19,23 @@ export default function Experience() {
               ONIKON Creative Inc.
             </h4>
             <div className="container--external mb-2 flex">
-              <a className="btn--external mr-1" href="https://onikon.com/" target="_blank">
+              <a
+                className="btn--external mr-1"
+                href="https://onikon.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon icon={faUpRightFromSquare} size="md" /> Website
               </a>
 
-              <a className="btn--external" href="https://apps.apple.com/ca/app/onikon/id6444296112" target="_blank">
-                <FontAwesomeIcon icon={faUpRightFromSquare} size="md" /> Application
+              <a
+                className="btn--external"
+                href="https://apps.apple.com/ca/app/onikon/id6444296112"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faUpRightFromSquare} size="md" />{" "}
+                Application
               </a>
             </div>
 
@@ -69,13 +77,14 @@ export default function Experience() {
             <h4 className="title-experience text-2xl mb-3">Vinple</h4>
 
             <div className="container--external mb-2 flex">
-              <a className="btn--external mr-1" href="https://web.base.town/" target="_blank">
+              <a
+                className="btn--external mr-1"
+                href="https://web.base.town/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon icon={faUpRightFromSquare} size="md" /> Website
               </a>
-
-              {/* <a className="btn--external" href="" target="_blank">
-                <FontAwesomeIcon icon={faUpRightFromSquare} size="md" /> Application
-              </a> */}
             </div>
             <ul>
               <li>

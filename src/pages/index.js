@@ -1,7 +1,7 @@
 import React from "react"
+import GlobalStyle from "../styles/globalStyles"
 import { Helmet } from "react-helmet"
 import Layout from "../components/TheLayout"
-
 import Landing from "../components/SectionLanding"
 import About from "../components/SectionAbout"
 import Skill from "../components/SectionSkill"
@@ -11,6 +11,7 @@ import Contact from "../components/SectionContact"
 export default function Home() {
   return (
     <Layout>
+      <GlobalStyle />
       <Helmet>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

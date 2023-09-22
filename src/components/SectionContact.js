@@ -22,7 +22,6 @@ export default function Contact() {
               <FontAwesomeIcon icon={faEnvelope} size="md" />{" "}
               seungjun.dev@gmail.com
             </a>
-            <p className="description"></p>
           </div>
         </div>
       </div>
