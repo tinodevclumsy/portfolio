@@ -21,6 +21,12 @@ const GlobalStyle = createGlobalStyle`
 .primary-bg {
   background-color: var(--primary-color);
 }
+.container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 15px;
+  margin: auto;
+}
 html {
   font-size: 16px;
   scroll-behavior: smooth;

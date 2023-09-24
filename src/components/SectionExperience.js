@@ -3,6 +3,45 @@ import Lottie from "lottie-react"
 import experienceAnimation from "../assets/exp.json"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
+import styled from "styled-components"
+
+const ExperienceListItem = styled.li`
+  position: relative;
+  list-style-type: none;
+  padding-left: 20px;
+
+  &::before {
+    content: "•";
+    position: absolute;
+    top: 0;
+    left: -0;
+  }
+`
+
+const SkillBadge = styled.div`
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 3px;
+  background-color: var(--primary-color);
+  color: #fff;
+`
+
+const LinkButton = styled.a`
+  display: inline-block;
+  color: var(--primary-color);
+  padding: 5px 10px;
+  border: 1px solid var(--primary-color);
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+  -webkit-transition: 0.2s ease-in-out all;
+  transition: 0.2s ease-in-out all;
+
+  &:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+`
 
 export default function Experience() {
   return (
@@ -11,7 +50,10 @@ export default function Experience() {
       className="container--section container--section-experience pt-10 pb-20"
     >
       <div className="container">
-        <Lottie animationData={experienceAnimation} className="animation-exp" />
+        <Lottie
+          animationData={experienceAnimation}
+          className="max-w-sm m-auto"
+        />
         <div className="inner-container flex mb-6">
           <div className="item-screenshot w-1/2"></div>
           <div className="item-experience w-1/2">
@@ -19,54 +61,56 @@ export default function Experience() {
               ONIKON Creative Inc.
             </h4>
             <div className="container--external mb-2 flex">
-              <a
-                className="btn--external mr-1"
+              <LinkButton
+                className="mr-1"
                 href="https://onikon.com/"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FontAwesomeIcon icon={faUpRightFromSquare} size="md" /> Website
-              </a>
-
-              <a
-                className="btn--external"
+              </LinkButton>
+              <LinkButton
                 href="https://apps.apple.com/ca/app/onikon/id6444296112"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FontAwesomeIcon icon={faUpRightFromSquare} size="md" />{" "}
                 Application
-              </a>
+              </LinkButton>
             </div>
 
             <ul>
-              <li>
+              <ExperienceListItem>
                 Developed and maintained Front-end side on internal CRM project
                 with Vuejs and Vuex
-              </li>
-              <li>
+              </ExperienceListItem>
+              <ExperienceListItem>
                 Developed real estate IDX plugin, dashboard and implemented it
                 on websites
-              </li>
-              <li>
+              </ExperienceListItem>
+              <ExperienceListItem>
                 Developed an application based on Vuejs and Quasar framework for
                 clients to schedule company's services
-              </li>
-              <li>Translated UX/UI designs to actual codes</li>
-              <li>
+              </ExperienceListItem>
+              <ExperienceListItem>
+                Translated UX/UI designs to actual codes
+              </ExperienceListItem>
+              <ExperienceListItem>
                 Developed, delivered and maintained interactive and responsive
                 websites with HTML, CSS, JS, JQuery and Wordpress
-              </li>
-              <li>Created and maintained Wordpress theme, plugins</li>
+              </ExperienceListItem>
+              <ExperienceListItem>
+                Created and maintained Wordpress theme, plugins
+              </ExperienceListItem>
             </ul>
 
             <div className="container--badge flex mt-3">
-              <div className="item--badge">HTML/CSS</div>
-              <div className="item--badge">Vue.js</div>
-              <div className="item--badge">Vuex</div>
-              <div className="item--badge">Nuxt.js</div>
-              <div className="item--badge">Wordpress</div>
-              <div className="item--badge">PHP</div>
+              <SkillBadge>HTML/CSS</SkillBadge>
+              <SkillBadge>Vue.js</SkillBadge>
+              <SkillBadge>Vuex/Pinia</SkillBadge>
+              <SkillBadge>Nuxt.js</SkillBadge>
+              <SkillBadge>Wordpress</SkillBadge>
+              <SkillBadge>PHP</SkillBadge>
             </div>
           </div>
         </div>
@@ -76,32 +120,33 @@ export default function Experience() {
           <div className="item-experience w-1/2">
             <h4 className="title-experience text-2xl mb-3">Vinple</h4>
 
-            <div className="container--external mb-2 flex">
-              <a
-                className="btn--external mr-1"
+            <div className="container--external mb-2">
+              <LinkButton
                 href="https://web.base.town/"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FontAwesomeIcon icon={faUpRightFromSquare} size="md" /> Website
-              </a>
+              </LinkButton>
             </div>
             <ul>
-              <li>
+              <ExperienceListItem>
                 Worked in a team developing a communication app for students in
                 BC
-              </li>
-              <li>
+              </ExperienceListItem>
+              <ExperienceListItem>
                 Developed and maintained web app with React and mobile
                 application with React Native
-              </li>
-              <li>Collaborated in agile environment based on Git and Jira</li>
+              </ExperienceListItem>
+              <ExperienceListItem>
+                Collaborated in agile environment based on Git and Jira
+              </ExperienceListItem>
             </ul>
 
             <div className="container--badge flex mt-3">
-              <div className="item--badge">React.js</div>
-              <div className="item--badge">React Native</div>
-              <div className="item--badge">Redux</div>
+              <SkillBadge>React.js</SkillBadge>
+              <SkillBadge>React Native</SkillBadge>
+              <SkillBadge>Redux</SkillBadge>
             </div>
           </div>
         </div>
