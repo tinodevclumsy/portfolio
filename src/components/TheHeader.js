@@ -20,6 +20,10 @@ const StyledHeader = styled.header`
     `}
 `
 
+const HeaderContainer = styled.div`
+  height: 100px;
+`
+
 const MenuItem = styled.a`
   position: relative;
 
@@ -58,11 +62,8 @@ export default function Header() {
   })
 
   return (
-    <StyledHeader
-      sticky={scrollPosition > 0}
-      className="header"
-    >
-      <div className="container flex justify-between items-center">
+    <StyledHeader sticky={scrollPosition > 0} className="header">
+      <HeaderContainer className="container flex justify-between items-center">
         <Logo>
           <img src={logo} alt="Seungjun Lee's Portfolio Website - Logo" />
         </Logo>
@@ -92,7 +93,7 @@ export default function Header() {
             </MenuItem>
           </li>
         </ul>
-      </div>
+      </HeaderContainer>
     </StyledHeader>
   )
 }

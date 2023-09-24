@@ -26,68 +26,7 @@
   color: #fff;
 }
 
-.btn--tino-white {
-  color: #fff;
-  border: 1px solid #fff;
-}
-
-
-/* header */
-
-.header .container {
-  height: 100px;
-}
-
-/* landing */
-
-.container--sns-top {
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 0;
-}
-
-.item--sns {
-  margin: 0 10px;
-}
-
-.animation-main {
-  max-width: 350px;
-}
-
-/* about */
-
-.container--section-about {
-  padding: 75px 0;
-}
-
-.container--section-about .description {
-  max-width: 850px;
-  margin: auto;
-}
-
-/* skill */
-
-.container--section-skill {
-  padding: 115px 0;
-  background-color: var(--primary-color);
-}
-
-.item-skill {
-  padding: 15px;
-  width: calc(25% - 20px);
-  color: #fff;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
-  margin: 10px;
-  border-radius: 5px;
-  text-align: center;
-}
-
 /* experience */
-
-.container--section-experience {
-  padding: 35px 0 75px;
-}
 
 .item-experience ul li {
   position: relative;

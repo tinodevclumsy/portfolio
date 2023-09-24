@@ -8,7 +8,7 @@ export default function Experience() {
   return (
     <div
       id="work-project"
-      className="container--section container--section-experience"
+      className="container--section container--section-experience pt-10 pb-20"
     >
       <div className="container">
         <Lottie animationData={experienceAnimation} className="animation-exp" />

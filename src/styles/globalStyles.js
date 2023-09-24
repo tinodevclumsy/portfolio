@@ -18,6 +18,9 @@ const GlobalStyle = createGlobalStyle`
 .primary-text {
   color: var(--primary-color);
 }
+.primary-bg {
+  background-color: var(--primary-color);
+}
 html {
   font-size: 16px;
   scroll-behavior: smooth;
