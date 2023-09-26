@@ -20,7 +20,7 @@ export default function Contact() {
       <div className="container--section container--section-contact py-20">
         <div className="container">
           <div className="container--content m-auto text-center">
-            <h3 className="title-contact max-w-3xl text-3xl mb-2 mx-auto">
+            <h3 className="title-contact max-w-3xl text-2xl md:text-3xl mb-2 mx-auto">
               Transforming visions into compelling user interfaces <br /> -
               Front-end Developer with a passion for creating seamless web
               experiences.

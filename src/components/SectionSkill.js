@@ -19,11 +19,18 @@ const SkillItem = styled.div`
   margin: 10px;
   border-radius: 5px;
   text-align: center;
+
+  @media (max-width: 768px) {
+    width: calc(50% - 20px);
+  }
 `
 
 export default function About() {
   return (
-    <div id="skill" className="container--section container--section-skill primary-bg py-28">
+    <div
+      id="skill"
+      className="container--section container--section-skill primary-bg py-28"
+    >
       <div className="container">
         <div className="inner-container flex flex-wrap">
           <SkillItem className="flex flex-col">

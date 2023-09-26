@@ -4,6 +4,15 @@ import experienceAnimation from "../assets/exp.json"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
 import styled from "styled-components"
+import portfolioBase from "../assets/images/base-portfolio.png"
+import portfolioOnikon from "../assets/images/onikon-portfolio01.png"
+import portfolioOnikonTwo from "../assets/images/onikon-portfolio02.png"
+import portfolioOnikonThree from "../assets/images/onikon-portfolio03.png"
+import portfolioOnikonFour from "../assets/images/onikon-portfolio04.png"
+
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 const ExperienceListItem = styled.li`
   position: relative;
@@ -17,6 +26,14 @@ const ExperienceListItem = styled.li`
     left: -0;
   }
 `
+
+const settings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+}
 
 const SkillBadge = styled.div`
   padding: 5px;
@@ -54,9 +71,43 @@ export default function Experience() {
           animationData={experienceAnimation}
           className="max-w-sm m-auto"
         />
-        <div className="inner-container flex mb-6">
-          <div className="item-screenshot w-1/2"></div>
-          <div className="item-experience w-1/2">
+        <div className="inner-container flex flex-wrap items-center mb-20">
+          <div className="item-screenshot w-full md:w-1/2">
+            <Slider {...settings}>
+              <div>
+                <img
+                  src={portfolioOnikon}
+                  alt="Seungjun Lee's Portfolio Website - Onikon Screenshot"
+                  className="max-w-full"
+                />
+              </div>
+
+              <div>
+                <img
+                  src={portfolioOnikonTwo}
+                  alt="Seungjun Lee's Portfolio Website - Onikon Screenshot"
+                  className="max-w-full"
+                />
+              </div>
+
+              <div>
+                <img
+                  src={portfolioOnikonThree}
+                  alt="Seungjun Lee's Portfolio Website - Onikon Screenshot"
+                  className="max-w-full"
+                />
+              </div>
+
+              <div>
+                <img
+                  src={portfolioOnikonFour}
+                  alt="Seungjun Lee's Portfolio Website - Onikon Screenshot"
+                  className="max-w-full"
+                />
+              </div>
+            </Slider>
+          </div>
+          <div className="item-experience pl-0 md:pl-4 w-full md:w-1/2 mt-8 md:mt-0">
             <h4 className="title-experience text-2xl mb-3">
               ONIKON Creative Inc.
             </h4>
@@ -104,7 +155,7 @@ export default function Experience() {
               </ExperienceListItem>
             </ul>
 
-            <div className="container--badge flex mt-3">
+            <div className="container--badge flex flex-wrap mt-3">
               <SkillBadge>HTML/CSS</SkillBadge>
               <SkillBadge>Vue.js</SkillBadge>
               <SkillBadge>Vuex/Pinia</SkillBadge>
@@ -115,9 +166,17 @@ export default function Experience() {
           </div>
         </div>
 
-        <div className="inner-container flex">
-          <div className="item-screenshot w-1/2"></div>
-          <div className="item-experience w-1/2">
+        <hr className="mb-20" />
+
+        <div className="inner-container flex items-center flex-wrap">
+          <div className="item-screenshot w-full md:w-1/2">
+            <img
+              src={portfolioBase}
+              alt="Seungjun Lee's Portfolio Website - Vinple Screenshot"
+              className="max-w-full"
+            />
+          </div>
+          <div className="item-experience flex flex-col justify-center pl-0 md:pl-4 w-full md:w-1/2 mt-8 md:mt-0">
             <h4 className="title-experience text-2xl mb-3">Vinple</h4>
 
             <div className="container--external mb-2">
@@ -143,7 +202,7 @@ export default function Experience() {
               </ExperienceListItem>
             </ul>
 
-            <div className="container--badge flex mt-3">
+            <div className="container--badge flex flex-wrap mt-3">
               <SkillBadge>React.js</SkillBadge>
               <SkillBadge>React Native</SkillBadge>
               <SkillBadge>Redux</SkillBadge>

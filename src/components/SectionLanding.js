@@ -15,12 +15,12 @@ const SnsContainer = styled.div`
 export default function Landing() {
   return (
     <div className="container--section container--section-landing section-landing relative h-screen flex justify-center items-center overflow-hidden">
-      <div className="container flex flex-col items-center">
-        <h1 className="header--title text-8xl">SEUNGJUN LEE</h1>
+      <div className="container flex flex-col items-center text-center">
+        <h1 className="header--title text-7xl md:text-8xl">SEUNGJUN LEE</h1>
 
-        <h2 className="text-6xl pt-2">FRONT-END DEVELOPER</h2>
+        <h2 className="text-4xl md:text-6xl pt-2">FRONT-END DEVELOPER</h2>
 
-        <Lottie animationData={smilieAnimation} className="animation-main max-w-sm" />
+        <Lottie animationData={smilieAnimation} className="animation-main max-w-xs md:max-w-sm" />
       </div>
 
       <SnsContainer className="absolute flex justify-center items-center">
