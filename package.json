@@ -22,6 +22,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "gatsby": "^4.24.4",
     "gatsby-plugin-fontawesome-css": "^1.2.0",
+    "gatsby-plugin-google-gtag": "^5.12.0",
     "lottie-react": "^2.4.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",

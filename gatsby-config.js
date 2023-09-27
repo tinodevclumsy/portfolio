@@ -5,16 +5,23 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  pathPrefix: "/tino-portfolio",
+  pathPrefix: "/portfolio",
   siteMetadata: {
     title: `Seungjun Lee - Front end Developer`,
     description: `Welcome to Seungjun's portfolio website!`,
-    // twitterUsername: `@gatsbyjs`,
-    // image: `/gatsby-icon.png`,
-    // siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
-    'gatsby-plugin-postcss',
+    "gatsby-plugin-postcss",
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-FCEDXCY30L",
+        ],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
   ],
 }
