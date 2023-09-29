@@ -39,6 +39,7 @@ const SkillBadge = styled.div`
   padding: 5px;
   border-radius: 5px;
   margin-right: 3px;
+  margin-bottom: 3px;
   background-color: var(--primary-color);
   color: #fff;
 `
@@ -71,9 +72,9 @@ export default function Experience() {
           animationData={experienceAnimation}
           className="max-w-sm m-auto"
         />
-        <div className="inner-container flex flex-wrap items-center mb-20">
-          <div className="item-screenshot w-full md:w-1/2">
-            <Slider {...settings}>
+        <div className="inner-container relative flex flex-wrap items-center mb-20">
+          <div className="item-screenshot relative w-full md:w-1/2">
+            <Slider {...settings} className="overflow-hidden">
               <div>
                 <img
                   src={portfolioOnikon}
