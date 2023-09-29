@@ -4,11 +4,11 @@ import experienceAnimation from "../assets/exp.json"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
 import styled from "styled-components"
-import portfolioBase from "../assets/images/portfolio-base.png"
-import portfolioOnikon from "../assets/images/portfolio-onikon-01.png"
-import portfolioOnikonTwo from "../assets/images/portfolio-onikon-02.png"
-import portfolioOnikonThree from "../assets/images/portfolio-onikon-03.png"
-import portfolioOnikonFour from "../assets/images/portfolio-onikon-04.png"
+import portfolioBase from "../assets/images/portfolio-base.webp"
+import portfolioOnikon from "../assets/images/portfolio-onikon-01.webp"
+import portfolioOnikonTwo from "../assets/images/portfolio-onikon-02.webp"
+import portfolioOnikonThree from "../assets/images/portfolio-onikon-03.webp"
+import portfolioOnikonFour from "../assets/images/portfolio-onikon-04.webp"
 
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
@@ -79,6 +79,8 @@ export default function Experience() {
                   src={portfolioOnikon}
                   alt="Seungjun Lee's Portfolio Website - Onikon Screenshot"
                   className="max-w-full"
+                  width={2940}
+                  height={1572}
                 />
               </div>
 
@@ -87,6 +89,8 @@ export default function Experience() {
                   src={portfolioOnikonTwo}
                   alt="Seungjun Lee's Portfolio Website - Onikon Screenshot"
                   className="max-w-full"
+                  width={2940}
+                  height={1572}
                 />
               </div>
 
@@ -95,6 +99,8 @@ export default function Experience() {
                   src={portfolioOnikonThree}
                   alt="Seungjun Lee's Portfolio Website - Onikon Screenshot"
                   className="max-w-full"
+                  width={2940}
+                  height={1572}
                 />
               </div>
 
@@ -103,6 +109,8 @@ export default function Experience() {
                   src={portfolioOnikonFour}
                   alt="Seungjun Lee's Portfolio Website - Onikon Screenshot"
                   className="max-w-full"
+                  width={2940}
+                  height={1572}
                 />
               </div>
             </Slider>
@@ -174,6 +182,8 @@ export default function Experience() {
               src={portfolioBase}
               alt="Seungjun Lee's Portfolio Website - Vinple Screenshot"
               className="max-w-full"
+              width={2940}
+              height={1572}
             />
           </div>
           <div className="item-experience flex flex-col justify-center pl-0 md:pl-4 w-full md:w-1/2 mt-8 md:mt-0">

@@ -65,7 +65,7 @@ export default function Header() {
     <StyledHeader sticky={scrollPosition > 0} className="header">
       <HeaderContainer className="container flex justify-between items-center">
         <Logo>
-          <img src={logo} alt="Seungjun Lee's Portfolio Website - Logo" />
+          <img src={logo} alt="Seungjun Lee's Portfolio Website - Logo" width={192} height={192}/>
         </Logo>
 
         <ul className="menu--list-top flex">
