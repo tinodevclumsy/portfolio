@@ -52,30 +52,6 @@ export default function About() {
           <SkillItem className="flex flex-col">
             <FontAwesomeIcon
               className="mb-2 text-white"
-              icon={faBootstrap}
-              size="3x"
-            />
-            Bootstrap
-          </SkillItem>
-          <SkillItem className="flex flex-col">
-            <FontAwesomeIcon
-              className="mb-2 text-white"
-              icon={faWordpress}
-              size="3x"
-            />
-            Wordpress
-          </SkillItem>
-          <SkillItem className="flex flex-col">
-            <FontAwesomeIcon
-              className="mb-2 text-white"
-              icon={faBootstrap}
-              size="3x"
-            />
-            Wordpress
-          </SkillItem>
-          <SkillItem className="flex flex-col">
-            <FontAwesomeIcon
-              className="mb-2 text-white"
               icon={faJsSquare}
               size="3x"
             />
@@ -96,6 +72,22 @@ export default function About() {
               size="3x"
             />
             Vue.js
+          </SkillItem>
+          <SkillItem className="flex flex-col">
+            <FontAwesomeIcon
+              className="mb-2 text-white"
+              icon={faBootstrap}
+              size="3x"
+            />
+            Bootstrap
+          </SkillItem>
+          <SkillItem className="flex flex-col">
+            <FontAwesomeIcon
+              className="mb-2 text-white"
+              icon={faWordpress}
+              size="3x"
+            />
+            Wordpress
           </SkillItem>
         </div>
       </div>
