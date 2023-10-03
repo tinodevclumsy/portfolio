@@ -6,10 +6,6 @@
 
 module.exports = {
   pathPrefix: "/portfolio",
-  siteMetadata: {
-    title: `Seungjun Lee - Front end Developer`,
-    description: `Welcome to Seungjun's portfolio website!`,
-  },
   plugins: [
     "gatsby-plugin-postcss",
     {

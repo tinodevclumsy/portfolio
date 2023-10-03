@@ -10,10 +10,6 @@ import portfolioOnikonTwo from "../assets/images/portfolio-onikon-02.webp"
 import portfolioOnikonThree from "../assets/images/portfolio-onikon-03.webp"
 import portfolioOnikonFour from "../assets/images/portfolio-onikon-04.webp"
 
-import Slider from "react-slick"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-
 const ExperienceListItem = styled.li`
   position: relative;
   list-style-type: none;
@@ -27,14 +23,6 @@ const ExperienceListItem = styled.li`
   }
 `
 
-const settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-}
-
 const SkillBadge = styled.div`
   padding: 5px;
   border-radius: 5px;
@@ -42,6 +30,14 @@ const SkillBadge = styled.div`
   margin-bottom: 3px;
   background-color: var(--primary-color);
   color: #fff;
+`
+const ImageContainer = styled.div`
+  width: calc(50% - 20px);
+  margin: 10px;
+
+  @media (max-width: 768px) {
+    width: calc(100% - 20px);
+  }
 `
 
 const LinkButton = styled.a`
@@ -73,50 +69,7 @@ export default function Experience() {
           className="max-w-sm m-auto"
         />
         <div className="inner-container relative flex flex-wrap items-center mb-20">
-          <div className="item-screenshot relative w-full md:w-1/2">
-            <Slider {...settings} className="overflow-hidden">
-              <div>
-                <img
-                  src={portfolioOnikon}
-                  alt="Seungjun Lee's Portfolio Website - Onikon Screenshot"
-                  className="max-w-full"
-                  width={2940}
-                  height={1572}
-                />
-              </div>
-
-              <div>
-                <img
-                  src={portfolioOnikonTwo}
-                  alt="Seungjun Lee's Portfolio Website - Onikon Screenshot"
-                  className="max-w-full"
-                  width={2940}
-                  height={1572}
-                />
-              </div>
-
-              <div>
-                <img
-                  src={portfolioOnikonThree}
-                  alt="Seungjun Lee's Portfolio Website - Onikon Screenshot"
-                  className="max-w-full"
-                  width={2940}
-                  height={1572}
-                />
-              </div>
-
-              <div>
-                <img
-                  src={portfolioOnikonFour}
-                  alt="Seungjun Lee's Portfolio Website - Onikon Screenshot"
-                  className="max-w-full"
-                  width={2940}
-                  height={1572}
-                />
-              </div>
-            </Slider>
-          </div>
-          <div className="item-experience pl-0 md:pl-4 w-full md:w-1/2 mt-8 md:mt-0">
+          <div className="item-experience pl-0 md:pl-4 w-full md:w-full mt-8 md:mt-0">
             <h4 className="title-experience text-2xl mb-3">
               ONIKON Creative Inc.
             </h4>
@@ -173,21 +126,55 @@ export default function Experience() {
               <SkillBadge>PHP</SkillBadge>
             </div>
           </div>
+          <div className="item-screenshot relative w-full md:w-full flex flex-wrap">
+            {/* <Slider {...settings} className="overflow-hidden"> */}
+            <ImageContainer>
+              <img
+                src={portfolioOnikon}
+                alt="Seungjun Lee's Portfolio Website - Onikon Screenshot"
+                className="max-w-full"
+                width={2940}
+                height={1572}
+              />
+            </ImageContainer>
+
+            <ImageContainer>
+              <img
+                src={portfolioOnikonTwo}
+                alt="Seungjun Lee's Portfolio Website - Onikon Screenshot"
+                className="max-w-full"
+                width={2940}
+                height={1572}
+              />
+            </ImageContainer>
+
+            <ImageContainer>
+              <img
+                src={portfolioOnikonThree}
+                alt="Seungjun Lee's Portfolio Website - Onikon Screenshot"
+                className="max-w-full"
+                width={2940}
+                height={1572}
+              />
+            </ImageContainer>
+
+            <ImageContainer>
+              <img
+                src={portfolioOnikonFour}
+                alt="Seungjun Lee's Portfolio Website - Onikon Screenshot"
+                className="max-w-full"
+                width={2940}
+                height={1572}
+              />
+            </ImageContainer>
+            {/* </Slider> */}
+          </div>
         </div>
 
         <hr className="mb-20" />
 
         <div className="inner-container flex items-center flex-wrap">
-          <div className="item-screenshot w-full md:w-1/2">
-            <img
-              src={portfolioBase}
-              alt="Seungjun Lee's Portfolio Website - Vinple Screenshot"
-              className="max-w-full"
-              width={2940}
-              height={1572}
-            />
-          </div>
-          <div className="item-experience flex flex-col justify-center pl-0 md:pl-4 w-full md:w-1/2 mt-8 md:mt-0">
+          <div className="item-experience flex flex-col justify-center pl-0 md:pl-4 w-full md:w-full mt-8 md:mt-0">
             <h4 className="title-experience text-2xl mb-3">Vinple</h4>
 
             <div className="container--external mb-2">
@@ -219,6 +206,15 @@ export default function Experience() {
               <SkillBadge>Redux</SkillBadge>
             </div>
           </div>
+          <ImageContainer className="item-screenshot">
+            <img
+              src={portfolioBase}
+              alt="Seungjun Lee's Portfolio Website - Vinple Screenshot"
+              className="max-w-full"
+              width={2940}
+              height={1572}
+            />
+          </ImageContainer>
         </div>
       </div>
     </div>

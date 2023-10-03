@@ -19,6 +19,8 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap"
           rel="stylesheet"
         />
+        <title>Seungjun Lee - Front end Developer in metro Vancouver</title>
+        <meta name="description" content="Welcome to Seungjun's portfolio website!"></meta>
       </Helmet>
       <section>
         <Landing />
