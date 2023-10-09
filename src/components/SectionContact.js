@@ -34,7 +34,7 @@ export default function Contact() {
               className="item-email text-xl"
               href="mailto:seungjun.dev@gmail.com"
             >
-              <FontAwesomeIcon icon={faEnvelope} size="md" />{" "}
+              <FontAwesomeIcon icon={faEnvelope} size="sm" />{" "}
               seungjun.dev@gmail.com
             </a>
           </div>

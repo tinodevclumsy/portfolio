@@ -80,14 +80,14 @@ export default function Experience() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <FontAwesomeIcon icon={faUpRightFromSquare} size="md" /> Website
+                <FontAwesomeIcon icon={faUpRightFromSquare} size="sm" /> Website
               </LinkButton>
               <LinkButton
                 href="https://apps.apple.com/ca/app/onikon/id6444296112"
                 target="_blank"
                 rel="noreferrer"
               >
-                <FontAwesomeIcon icon={faUpRightFromSquare} size="md" />{" "}
+                <FontAwesomeIcon icon={faUpRightFromSquare} size="sm" />{" "}
                 Application
               </LinkButton>
             </div>
@@ -183,7 +183,7 @@ export default function Experience() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <FontAwesomeIcon icon={faUpRightFromSquare} size="md" /> Website
+                <FontAwesomeIcon icon={faUpRightFromSquare} size="sm" /> Website
               </LinkButton>
             </div>
             <ul>

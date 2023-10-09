@@ -62,7 +62,7 @@ export default function Header() {
   })
 
   return (
-    <StyledHeader sticky={scrollPosition > 0} className="header">
+    <StyledHeader sticky={scrollPosition > 0 ? 1 : 0} className="header">
       <HeaderContainer className="container flex justify-between items-center">
         <Logo>
           <img src={logo} alt="Seungjun Lee's Portfolio Website - Logo" width={192} height={192}/>

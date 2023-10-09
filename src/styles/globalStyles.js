@@ -5,12 +5,6 @@ const GlobalStyle = createGlobalStyle`
 :after,
 :before {
   font-family: "Schoolbell", cursive;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  border-width: 0;
-  border-style: solid;
-  border-color: #e2e8f0;
-  margin: 0;
 }
 :root {
   --primary-color: #66a1ee;
