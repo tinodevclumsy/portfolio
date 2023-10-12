@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import logo from "../assets/images/logo.png"
 import styled, { css } from "styled-components"
+import { useStaticQuery, graphql } from "gatsby"
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -53,6 +54,21 @@ const Logo = styled.div`
 `
 
 export default function Header() {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            menuLinks {
+              name
+              link
+            }
+          }
+        }
+      }
+    `
+  )
+
   const [scrollPosition, setScrollPosition] = useState(0)
   const updateScroll = () => {
     setScrollPosition(window.scrollY || document.documentElement.scrollTop)
@@ -65,33 +81,24 @@ export default function Header() {
     <StyledHeader sticky={scrollPosition > 0 ? 1 : 0} className="header">
       <HeaderContainer className="container flex justify-between items-center">
         <Logo>
-          <img src={logo} alt="Seungjun Lee's Portfolio Website - Logo" width={192} height={192}/>
+          <img
+            src={logo}
+            alt="Seungjun Lee's Portfolio Website - Logo"
+            width={192}
+            height={192}
+          />
         </Logo>
 
         <ul className="menu--list-top flex">
-          <li className="menu--item inline-block mx-3.5">
-            <MenuItem className="py-5" href="#about">
-              About
-            </MenuItem>
-          </li>
-
-          <li className="menu--item inline-block mx-3.5">
-            <MenuItem className="py-5" href="#skill">
-              Skill
-            </MenuItem>
-          </li>
-
-          <li className="menu--item inline-block mx-3.5">
-            <MenuItem className="py-5" href="#work-project">
-              Work/Project
-            </MenuItem>
-          </li>
-
-          <li className="menu--item inline-block mx-3.5">
-            <MenuItem className="py-5" href="#contact">
-              Contact
-            </MenuItem>
-          </li>
+          {site.siteMetadata.menuLinks.map((menu, i) => {
+            return (
+              <li key={i} className="menu--item inline-block mx-3.5">
+                <MenuItem className="py-5" href={menu.link}>
+                  {menu.name}
+                </MenuItem>
+              </li>
+            )
+          })}
         </ul>
       </HeaderContainer>
     </StyledHeader>
