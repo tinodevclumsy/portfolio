@@ -28,6 +28,14 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-postcss",
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/content`,
+      },
+    },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {

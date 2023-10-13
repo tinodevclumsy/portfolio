@@ -10,8 +10,7 @@ import Contact from "../components/SectionContact"
 
 export default function Home() {
   return (
-    <Layout>
-      <GlobalStyle />
+    <>
       <Helmet>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,15 +19,21 @@ export default function Home() {
           rel="stylesheet"
         />
         <title>Seungjun Lee - Front end Developer in metro Vancouver</title>
-        <meta name="description" content="Welcome to Seungjun's portfolio website!"></meta>
+        <meta
+          name="description"
+          content="Welcome to Seungjun's portfolio website!"
+        ></meta>
       </Helmet>
-      <section>
-        <Landing />
-        <About />
-        <Skill />
-        <Experience />
-        <Contact />
-      </section>
-    </Layout>
+      <Layout>
+        <GlobalStyle />
+        <section>
+          <Landing />
+          <About />
+          <Skill />
+          <Experience />
+          <Contact />
+        </section>
+      </Layout>
+    </>
   )
 }
