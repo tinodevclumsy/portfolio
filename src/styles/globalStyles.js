@@ -1,13 +1,14 @@
 import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
-*,
+/* *,
 :after,
 :before {
   font-family: "Schoolbell", cursive;
-}
+} */
 :root {
-  --primary-color: #66a1ee;
+  /* --primary-color: #66a1ee; */
+  --primary-color: #000;
 }
 .primary-text {
   color: var(--primary-color);

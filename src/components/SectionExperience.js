@@ -1,6 +1,4 @@
 import React from "react"
-import Lottie from "lottie-react"
-import experienceAnimation from "../assets/exp.json"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
 import styled from "styled-components"
@@ -64,10 +62,6 @@ export default function Experience() {
       className="container--section container--section-experience pt-10 pb-20"
     >
       <div className="container">
-        <Lottie
-          animationData={experienceAnimation}
-          className="max-w-sm m-auto"
-        />
         <div className="inner-container relative flex flex-wrap items-center mb-20">
           <div className="item-experience pl-0 md:pl-4 w-full md:w-full mt-8 md:mt-0">
             <h4 className="title-experience text-2xl mb-3">
@@ -127,7 +121,6 @@ export default function Experience() {
             </div>
           </div>
           <div className="item-screenshot relative w-full md:w-full flex flex-wrap">
-            {/* <Slider {...settings} className="overflow-hidden"> */}
             <ImageContainer>
               <img
                 src={portfolioOnikon}
@@ -167,7 +160,6 @@ export default function Experience() {
                 height={1572}
               />
             </ImageContainer>
-            {/* </Slider> */}
           </div>
         </div>
 
