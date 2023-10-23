@@ -17,5 +17,11 @@ duty:
   - Translated UX/UI designs to actual codes
   - Developed, delivered and maintained interactive and responsive websites with HTML, CSS, JS, JQuery and Wordpress
   - Created and maintained Wordpress theme, plugins
-# cover: './images/portfolio-base.webp'
+img: 
+  - './images/portfolio-onikon-01.webp'
+  - './images/portfolio-onikon-02.webp'
+  - './images/portfolio-onikon-03.webp'
+  - './images/portfolio-onikon-04.webp'
+mobile: 'https://apps.apple.com/ca/app/onikon/id6444296112'
+site: 'https://onikon.com/'
 ---

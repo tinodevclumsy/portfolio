@@ -3,11 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
-import portfolioBase from "../assets/images/portfolio-base.webp"
-import portfolioOnikon from "../assets/images/portfolio-onikon-01.webp"
-import portfolioOnikonTwo from "../assets/images/portfolio-onikon-02.webp"
-import portfolioOnikonThree from "../assets/images/portfolio-onikon-03.webp"
-import portfolioOnikonFour from "../assets/images/portfolio-onikon-04.webp"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const ExperienceListItem = styled.li`
   position: relative;
@@ -31,7 +27,7 @@ const SkillBadge = styled.div`
   color: #fff;
 `
 const ImageContainer = styled.div`
-  width: calc(50% - 20px);
+  width: calc(33.33333% - 20px);
   margin: 10px;
 
   @media (max-width: 768px) {
@@ -61,7 +57,7 @@ export default function Experience() {
     {
       exp: allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/content/work/" } }
-        sort: { fields: [frontmatter___order], order: ASC }
+        sort: { frontmatter: { order: ASC } }
       ) {
         edges {
           node {
@@ -72,6 +68,15 @@ export default function Experience() {
               range
               stack
               duty
+              img {
+                childImageSharp {
+                  gatsbyImageData(
+                    width: 2940
+                    placeholder: BLURRED
+                    formats: [WEBP]
+                  )
+                }
+              }
             }
             html
           }
@@ -79,8 +84,6 @@ export default function Experience() {
       }
     }
   `)
-
-  console.log(exp)
 
   return (
     <div
@@ -90,13 +93,9 @@ export default function Experience() {
       <div className="container">
         <div className="inner-container relative flex flex-wrap items-center mb-20">
           {exp.edges.map((item, index) => {
-            const { title, company, duty, location, range, stack } =
+            const { title, company, duty, location, range, stack, img } =
               item.node.frontmatter
             return (
-              // <div
-              //   key={`work-${index}`}
-              //   className="inner-container relative flex flex-wrap items-center"
-              // >
               <div
                 key={`work-${index}`}
                 className="item-experience pl-0 md:pl-4 w-full md:w-full mt-8 md:mt-0"
@@ -109,14 +108,36 @@ export default function Experience() {
                 </div>
                 <ul>
                   {duty.map((dutyItem, dutyIndex) => (
-                    <ExperienceListItem key={`duty-${dutyIndex}`}>{dutyItem}</ExperienceListItem>
+                    <ExperienceListItem key={`duty-${dutyIndex}`}>
+                      {dutyItem}
+                    </ExperienceListItem>
                   ))}
                 </ul>
 
                 <div className="container--badge flex flex-wrap mt-3">
                   {stack.map((stackItem, stackIndex) => (
-                    <SkillBadge key={`stack-${stackIndex}`}>{stackItem}</SkillBadge>
+                    <SkillBadge key={`stack-${stackIndex}`}>
+                      {stackItem}
+                    </SkillBadge>
                   ))}
+                </div>
+
+                <div>
+                  <h5>Featured</h5>
+                  <div className="item-screenshot relative w-full md:w-full flex flex-wrap">
+                    {img.map(imgItem => {
+                      const image = getImage(imgItem)
+                      return (
+                        <ImageContainer>
+                          <GatsbyImage
+                            image={image}
+                            alt={title}
+                            className="img"
+                          />
+                        </ImageContainer>
+                      )
+                    })}
+                  </div>
                 </div>
               </div>
             )
