@@ -2,6 +2,7 @@ import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
 import styled from "styled-components"
+import { useStaticQuery, graphql } from "gatsby"
 import portfolioBase from "../assets/images/portfolio-base.webp"
 import portfolioOnikon from "../assets/images/portfolio-onikon-01.webp"
 import portfolioOnikonTwo from "../assets/images/portfolio-onikon-02.webp"
@@ -56,6 +57,31 @@ const LinkButton = styled.a`
 `
 
 export default function Experience() {
+  const { exp } = useStaticQuery(graphql`
+    {
+      exp: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/content/work/" } }
+        sort: { fields: [frontmatter___order], order: ASC }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              title
+              company
+              location
+              range
+              stack
+              duty
+            }
+            html
+          }
+        }
+      }
+    }
+  `)
+
+  console.log(exp)
+
   return (
     <div
       id="work-project"
@@ -63,6 +89,40 @@ export default function Experience() {
     >
       <div className="container">
         <div className="inner-container relative flex flex-wrap items-center mb-20">
+          {exp.edges.map((item, index) => {
+            const { title, company, duty, location, range, stack } =
+              item.node.frontmatter
+            return (
+              // <div
+              //   key={`work-${index}`}
+              //   className="inner-container relative flex flex-wrap items-center"
+              // >
+              <div
+                key={`work-${index}`}
+                className="item-experience pl-0 md:pl-4 w-full md:w-full mt-8 md:mt-0"
+              >
+                <div className="work-header mb-3">
+                  <h4 className="text-3xl">{title}</h4>
+                  <h5 className="title-experience text-2xl mb-1">{company}</h5>
+                  <p>{location}</p>
+                  <p>{range}</p>
+                </div>
+                <ul>
+                  {duty.map((dutyItem, dutyIndex) => (
+                    <ExperienceListItem key={`duty-${dutyIndex}`}>{dutyItem}</ExperienceListItem>
+                  ))}
+                </ul>
+
+                <div className="container--badge flex flex-wrap mt-3">
+                  {stack.map((stackItem, stackIndex) => (
+                    <SkillBadge key={`stack-${stackIndex}`}>{stackItem}</SkillBadge>
+                  ))}
+                </div>
+              </div>
+            )
+          })}
+        </div>
+        {/* <div className="inner-container relative flex flex-wrap items-center mb-20">
           <div className="item-experience pl-0 md:pl-4 w-full md:w-full mt-8 md:mt-0">
             <h4 className="title-experience text-2xl mb-3">
               ONIKON Creative Inc.
@@ -207,7 +267,7 @@ export default function Experience() {
               height={1572}
             />
           </ImageContainer>
-        </div>
+        </div> */}
       </div>
     </div>
   )
