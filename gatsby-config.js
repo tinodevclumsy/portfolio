@@ -39,8 +39,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `skills`,
-        path: `${__dirname}/content/skills`,
+        name: `work`,
+        path: `${__dirname}/content/work`,
       },
     },
     `gatsby-transformer-remark`,
@@ -55,5 +55,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 }
