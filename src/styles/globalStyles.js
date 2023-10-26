@@ -38,6 +38,7 @@ html {
   scroll-behavior: smooth;
   background-color: #1E2F56;
   color: #FFFFE0;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none !important;

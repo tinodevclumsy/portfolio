@@ -26,6 +26,7 @@ export const SkillBadge = styled.div`
   /* background-color: var(--primary-color); */
   background-color: #333;
   color: #fff;
+  font-size: 14px;
 `
 
 export const ImageContainer = styled.div`

@@ -83,8 +83,8 @@ export default function Experience() {
                 <div className="work-header mb-5">
                   <h4 className="text-3xl">{title}</h4>
                   <h5 className="title-experience text-2xl mb-1">{company}</h5>
-                  <p>{location}</p>
-                  <p>{range}</p>
+                  <p style={{fontSize: '14px', color: '#999'}}>{location}</p>
+                  <p style={{fontSize: '14px', color: '#999'}}>{range}</p>
                 </div>
                 <div className="container--detail">
                   <ExpDetailHeader
