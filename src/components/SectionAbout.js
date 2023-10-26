@@ -7,7 +7,7 @@ export default function About() {
       <div className="container--section container--section-about py-20">
         <div className="container">
           <div className="container--content m-auto text-center">
-            <h2 className="text-4xl mb-2">
+            <h2 className="text-3xl mb-2 md:text-4xl">
               Transforming visions into compelling user interfaces - <span className="primary-text test">
               Front-end Developer</span> with a passion for creating seamless web experiences.
             </h2>
