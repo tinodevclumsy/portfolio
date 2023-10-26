@@ -17,13 +17,11 @@ const ContactIcon = styled.div`
 export default function Contact() {
   return (
     <div id="contact">
-      <div className="container--section container--section-contact py-20">
+      <div className="container--section container--section-contact pb-20">
         <div className="container">
           <div className="container--content m-auto text-center">
             <h3 className="title-contact max-w-3xl text-2xl md:text-3xl mb-2 mx-auto">
-              Transforming visions into compelling user interfaces <br /> -
-              Front-end Developer with a passion for creating seamless web
-              experiences.
+              Seeking new opportunities in front-end development!
             </h3>
 
             <ContactIcon>
@@ -31,10 +29,10 @@ export default function Contact() {
             </ContactIcon>
 
             <a
-              className="item-email text-xl"
+              className="item-email text-xl text-white inline-flex items-center"
               href="mailto:seungjun.dev@gmail.com"
             >
-              <FontAwesomeIcon icon={faEnvelope} size="sm" />{" "}
+              <FontAwesomeIcon className="mr-1" icon={faEnvelope} size="sm" />
               seungjun.dev@gmail.com
             </a>
           </div>

@@ -7,16 +7,17 @@ const StyledHeader = styled.header`
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: #1E2F56;
   z-index: 100;
-  -webkit-transition: 0.2s ease-in-out all;
-  transition: 0.2s ease-in-out all;
+  -webkit-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
 
   ${props =>
     props.sticky &&
     css`
-      -webkit-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.1);
-      box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.1);
+      top: -100px;
+      /* -webkit-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.1); */
     `}
 `
 
@@ -79,7 +80,7 @@ export default function Header() {
           {site.siteMetadata.menuLinks.map((menu, i) => {
             return (
               <li key={i} className="menu--item inline-block mx-3.5">
-                <MenuItem className="py-5" href={menu.link}>
+                <MenuItem className="py-5 text-white uppercase" href={menu.link}>
                   {menu.name}
                 </MenuItem>
               </li>

@@ -14,7 +14,7 @@ export default function Landing() {
   return (
     <div className="container--section container--section-landing section-landing relative h-screen flex justify-center items-center overflow-hidden">
       <div className="container flex flex-col">
-        <h1 className="header--title text-5xl md:text-8xl">SEUNGJUN LEE</h1>
+        <h1 className="header--title text-5xl md:text-8xl primary-text test">SEUNGJUN LEE</h1>
 
         <h2 className="text-3xl font-light md:text-6xl">FRONT-END DEVELOPER</h2>
         <h2 className="text-3xl font-light md:text-6xl">BASED IN</h2>
@@ -28,7 +28,7 @@ export default function Landing() {
           target="_blank"
           rel="noreferrer"
         >
-          <FontAwesomeIcon icon={faLinkedin} size="2x" />
+          <FontAwesomeIcon className="primary-text" icon={faLinkedin} size="2x" />
         </a>
         <a
           className="item--sns d-flex mx-2.5"
@@ -36,7 +36,7 @@ export default function Landing() {
           target="_blank"
           rel="noreferrer"
         >
-          <FontAwesomeIcon icon={faGithub} size="2x" />
+          <FontAwesomeIcon className="primary-text" icon={faGithub} size="2x" />
         </a>
       </SnsContainer>
     </div>

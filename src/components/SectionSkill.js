@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
-import Icon from "./Icon"
+import Icon from "./common/Icon"
 
 const SkillItem = styled.div`
   padding: 15px;
@@ -11,6 +11,7 @@ const SkillItem = styled.div`
   margin: 10px;
   border-radius: 5px;
   text-align: center;
+  background-color: #333;
 
   @media (max-width: 768px) {
     width: calc(50% - 20px);
@@ -38,7 +39,7 @@ export default function About() {
   return (
     <div
       id="skill"
-      className="container--section container--section-skill primary-bg py-28"
+      className="container--section container--section-skill pb-28"
     >
       <div className="container">
         <div className="inner-container flex flex-wrap justify-center">
