@@ -1,5 +1,5 @@
 import React from "react"
-import StyledButton from "./StyledButton"
+import Button from '../common/Button'
 
 export default function About() {
   return (
@@ -17,7 +17,7 @@ export default function About() {
               development, with proficiency in HTML, CSS, JavaScript, Vue.js,
               and React.js and strong interests in mobile development as well.
             </p>
-            <StyledButton message="Contact Me" link="#contact" />
+            <Button message="Contact Me" link="#contact" />
           </div>
         </div>
       </div>

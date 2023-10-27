@@ -2,11 +2,11 @@ import React from "react"
 import GlobalStyle from "../styles/globalStyles"
 import { Helmet } from "react-helmet"
 import Layout from "../components/TheLayout"
-import Landing from "../components/SectionLanding"
-import About from "../components/SectionAbout"
-import Skill from "../components/SectionSkill"
-import Experience from "../components/SectionExperience"
-import Contact from "../components/SectionContact"
+import Landing from "../components/section/SectionLanding"
+import About from "../components/section/SectionAbout"
+import Skill from "../components/section/SectionSkill"
+import Experience from "../components/section/SectionExperience"
+import Contact from "../components/section/SectionContact"
 
 export default function Home() {
   return (

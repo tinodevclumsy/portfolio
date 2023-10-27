@@ -13,7 +13,6 @@ const CustomButton = styled.a`
   text-align: center;
   -webkit-transition: 0.2s ease-in-out all;
   transition: 0.2s ease-in-out all;
-
   &:hover {
     color: #fff;
     background-color: #000;
@@ -21,6 +20,6 @@ const CustomButton = styled.a`
   }
 `
 
-const StyledButton = ({ message, link }) => <CustomButton href={link}>{message}</CustomButton>
+const Button = ({ message, link }) => <CustomButton href={link}>{message}</CustomButton>
 
-export default StyledButton
+export default Button

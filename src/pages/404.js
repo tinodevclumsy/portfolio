@@ -2,8 +2,7 @@ import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
 import styled from "styled-components"
-
-import StyledButton from "../components/StyledButton"
+import Button from "../components/common/Button"
 
 const SnsContainer = styled.div`
   bottom: 0;
@@ -18,7 +17,7 @@ export default function Landing() {
       <div className="container flex flex-col items-center text-center">
         <h1 className="text-4xl">NOT FOUND</h1>
 
-        <StyledButton message="Back to Home" link="/" />
+        <Button message="Back to Home" link="/" />
       </div>
 
       <SnsContainer className="absolute flex justify-center items-center">

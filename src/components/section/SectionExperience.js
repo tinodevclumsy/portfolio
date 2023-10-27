@@ -14,7 +14,7 @@ import {
   LinkButton,
   ExpDetailHeader,
   Title,
-} from "./styled/StyledExperience"
+} from "../styled/StyledExperience"
 
 export default function Experience() {
   const { exp } = useStaticQuery(graphql`
@@ -36,7 +36,6 @@ export default function Experience() {
                 childImageSharp {
                   gatsbyImageData(
                     width: 2940
-                    placeholder: BLURRED
                     formats: [WEBP]
                   )
                 }
@@ -150,10 +149,10 @@ export default function Experience() {
                     ref={ele => (imageRefs.current[index] = ele)}
                     style={{ maxHeight: "0px" }}
                   >
-                    {img.map(imgItem => {
+                    {img.map((imgItem, imgIndex) => {
                       const image = getImage(imgItem)
                       return (
-                        <ImageContainer>
+                        <ImageContainer key={`image-${index}-${imgIndex}`}>
                           <GatsbyImage
                             image={image}
                             alt={title}

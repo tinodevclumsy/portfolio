@@ -34,10 +34,15 @@ const GlobalStyle = createGlobalStyle`
   transition: 0.2s ease-in-out all;
 }
 html {
+  position: relative;
   font-size: 16px;
   scroll-behavior: smooth;
   background-color: #1E2F56;
   color: #FFFFE0;
+  overflow-x: hidden;
+}
+body {
+  position: relative;
   overflow-x: hidden;
 }
 a {
