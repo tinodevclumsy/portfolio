@@ -36,6 +36,7 @@ export default function Experience() {
                 childImageSharp {
                   gatsbyImageData(
                     width: 2940
+                    placeholder: BLURRED
                     formats: [WEBP]
                   )
                 }

@@ -15,8 +15,6 @@ export const StyledHeader = styled.header`
     props.sticky &&
     css`
       top: -100px;
-      /* -webkit-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.1);
-      box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.1); */
     `}
 `
 
@@ -24,8 +22,29 @@ export const HeaderContainer = styled.div`
   height: 100px;
 `
 
+export const Menu = styled.ul`
+  @media (max-width: 768px) {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    text-align: right;
+    transform: translateX(100%);
+    -webkit-transition: 0.2s ease-in-out all;
+    transition: 0.2s ease-in-out all;
+
+    ${props =>
+      props.open &&
+      css`
+        transform: translateX(0);
+      `}
+  }
+`
+
 export const MenuItem = styled.a`
   position: relative;
+  display: inline-block;
 
   &:hover {
     &::before {
@@ -46,4 +65,15 @@ export const MenuItem = styled.a`
     -webkit-transition: 0.2s ease-in-out all;
     transition: 0.2s ease-in-out all;
   }
+`
+
+export const HeaderOverlay = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    
 `
