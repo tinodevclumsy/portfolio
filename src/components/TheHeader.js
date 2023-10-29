@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { StyledHeader, HeaderContainer, Menu, MenuItem } from "./styled/StyledHeader"
+import {
+  StyledHeader,
+  HeaderContainer,
+  Menu,
+  MenuItem,
+} from "./styled/StyledHeader"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 
@@ -25,21 +30,34 @@ export default function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false)
 
   const updateScroll = () => {
-    setSticky((window.scrollY || document.documentElement.scrollTop) > scrollPosition)
-    // const direction =(window.scrollY || document.documentElement.scrollTop) > scrollPosition ? 'down' : 'up'
-    setScrollPosition(window.scrollY || document.documentElement.scrollTop)
-    if(scrollPosition > 0) setMenuOpen(false)
+    requestAnimationFrame(() => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop
+      const isSticky = scrollTop > scrollPosition
+      setSticky(isSticky)
+      setScrollPosition(scrollTop)
+      if (scrollPosition > 0) setMenuOpen(false)
+    })
   }
+
   useEffect(() => {
     window.addEventListener("scroll", updateScroll)
-  })
+
+    return () => {
+      window.removeEventListener("scroll", updateScroll)
+    }
+  }, [scrollPosition])
 
   return (
     <StyledHeader sticky={isSticky} className="header">
       <HeaderContainer className="container flex justify-between items-center relative">
         <div></div>
         <div className="flex items-center">
-          <FontAwesomeIcon onClick={() =>setMenuOpen(!isMenuOpen)} className="block cursor-pointer md:hidden" icon={faBars} size="lg" />
+          <FontAwesomeIcon
+            onClick={() => setMenuOpen(prevIsMenuOpen => !prevIsMenuOpen)}
+            className="block cursor-pointer md:hidden"
+            icon={faBars}
+            size="lg"
+          />
           <Menu className="menu--list-top flex md:block" open={isMenuOpen}>
             {site.siteMetadata.menuLinks.map((menu, i) => {
               return (
