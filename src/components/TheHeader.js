@@ -25,17 +25,14 @@ export default function Header() {
     `
   )
 
-  const [scrollPosition, setScrollPosition] = useState(0)
   const [isSticky, setSticky] = useState(false)
   const [isMenuOpen, setMenuOpen] = useState(false)
 
   const updateScroll = () => {
     requestAnimationFrame(() => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop
-      const isSticky = scrollTop > scrollPosition
+      const isSticky = scrollTop > 0
       setSticky(isSticky)
-      setScrollPosition(scrollTop)
-      if (scrollPosition > 0) setMenuOpen(false)
     })
   }
 
@@ -45,7 +42,7 @@ export default function Header() {
     return () => {
       window.removeEventListener("scroll", updateScroll)
     }
-  }, [scrollPosition])
+  }, [])
 
   return (
     <StyledHeader sticky={isSticky} className="header">

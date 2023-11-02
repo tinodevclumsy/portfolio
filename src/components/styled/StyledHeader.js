@@ -14,8 +14,9 @@ export const StyledHeader = styled.header`
   ${props =>
     props.sticky &&
     css`
-      top: -100px;
       background-color: #1e2f56;
+      -webkit-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.1);
     `}
 `
 
