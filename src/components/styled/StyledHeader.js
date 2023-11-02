@@ -6,8 +6,8 @@ export const StyledHeader = styled.header`
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #1e2f56;
   z-index: 100;
+  background-color: transparent;
   -webkit-transition: 0.3s ease-in-out all;
   transition: 0.3s ease-in-out all;
 
@@ -15,6 +15,7 @@ export const StyledHeader = styled.header`
     props.sticky &&
     css`
       top: -100px;
+      background-color: #1e2f56;
     `}
 `
 
@@ -68,12 +69,10 @@ export const MenuItem = styled.a`
 `
 
 export const HeaderOverlay = styled.div`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-
-    
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 `

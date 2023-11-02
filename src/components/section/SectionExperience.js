@@ -56,9 +56,9 @@ export default function Experience() {
   function onRefHeaderClick(type, index) {
     const targetRef =
       type === "detail" ? detailRefs : type === "stack" ? stackRefs : imageRefs
-    const height = targetRef.current[index].clientHeight
-      ? targetRef.current[index].clientHeight
-      : targetRef.current[index].scrollHeight
+    const height = targetRef.current[index].scrollHeight
+      // ? targetRef.current[index].clientHeight
+      // : targetRef.current[index].scrollHeight
     const maxHeight = targetRef.current[index].style.maxHeight
     targetRef.current[index].style.maxHeight =
       maxHeight === "0px" ? `${height}px` : "0px"
@@ -70,7 +70,7 @@ export default function Experience() {
       className="container--section container--section-experience pt-10"
     >
       <div className="container">
-        <Title className="text-4xl text-center">WORK</Title>
+        <Title className="text-4xl text-center test">WORK</Title>
         <div className="inner-container relative flex flex-wrap items-center mb-20">
           {exp.edges.map((item, index) => {
             const { title, company, duty, location, range, stack, img } =
