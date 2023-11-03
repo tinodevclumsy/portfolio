@@ -1,4 +1,3 @@
-import React from "react"
 import styled, { css } from "styled-components"
 
 export const StyledHeader = styled.header`
@@ -12,7 +11,7 @@ export const StyledHeader = styled.header`
   transition: 0.3s ease-in-out all;
 
   ${props =>
-    props.sticky &&
+    props.$sticky &&
     css`
       background-color: #1e2f56;
       -webkit-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.1);

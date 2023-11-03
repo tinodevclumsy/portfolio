@@ -28,12 +28,11 @@ export default function Header() {
 
   const [isSticky, setSticky] = useState(false)
   const [isMenuOpen, setMenuOpen] = useState(false)
-
   const updateScroll = () => {
     requestAnimationFrame(() => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop
-      const isSticky = scrollTop > 0
-      setSticky(isSticky)
+      const sticky = scrollTop > 0
+      setSticky(sticky);
     })
   }
 
@@ -47,7 +46,7 @@ export default function Header() {
 
   return (
     <>
-      <StyledHeader sticky={isSticky} open={isMenuOpen} className="header">
+      <StyledHeader $sticky={isSticky} open={isMenuOpen} className="header">
         <HeaderContainer className="container flex justify-between items-center relative">
           <div></div>
           <div className="flex items-center">

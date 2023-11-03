@@ -1,7 +1,7 @@
 import React, { useRef } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
-  faUpRightFromSquare,
+  // faUpRightFromSquare,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons"
 import { useStaticQuery, graphql } from "gatsby"
@@ -11,7 +11,7 @@ import {
   SkillBadge,
   ImageContainer,
   ImageOverlay,
-  LinkButton,
+  // LinkButton,
   ExpDetailHeader,
   Title,
 } from "../styled/StyledExperience"
