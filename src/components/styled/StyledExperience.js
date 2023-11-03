@@ -6,7 +6,7 @@ export const Title = styled.h2`
   margin-bottom: 50px;
   font-weight: 700;
   &::before {
-    content: '';
+    content: "";
     width: 25px;
     height: 5px;
     background-color: var(--primary-color);
@@ -97,3 +97,4 @@ export const ExpDetailHeader = styled.span`
     background-color: #fff;
   }
 `
+

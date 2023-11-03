@@ -57,8 +57,8 @@ export default function Experience() {
     const targetRef =
       type === "detail" ? detailRefs : type === "stack" ? stackRefs : imageRefs
     const height = targetRef.current[index].scrollHeight
-      // ? targetRef.current[index].clientHeight
-      // : targetRef.current[index].scrollHeight
+    // ? targetRef.current[index].clientHeight
+    // : targetRef.current[index].scrollHeight
     const maxHeight = targetRef.current[index].style.maxHeight
     targetRef.current[index].style.maxHeight =
       maxHeight === "0px" ? `${height}px` : "0px"
@@ -67,7 +67,7 @@ export default function Experience() {
   return (
     <div
       id="work-project"
-      className="container--section container--section-experience pt-10"
+      className="container--section container--section-experience relative pt-10"
     >
       <div className="container">
         <Title className="text-4xl text-center test">WORK</Title>
@@ -78,13 +78,13 @@ export default function Experience() {
             return (
               <div
                 key={`work-${index}`}
-                className="item-experience pl-0 md:pl-4 w-full md:w-full mt-8 mb-10 md:mt-0"
+                className="item-experience relative pl-0 md:pl-4 w-full md:w-full mt-8 mb-10 md:mt-0"
               >
                 <div className="work-header mb-5">
                   <h4 className="text-3xl">{title}</h4>
                   <h5 className="title-experience text-2xl mb-1">{company}</h5>
-                  <p style={{fontSize: '14px', color: '#999'}}>{location}</p>
-                  <p style={{fontSize: '14px', color: '#999'}}>{range}</p>
+                  <p style={{ fontSize: "14px", color: "#999" }}>{location}</p>
+                  <p style={{ fontSize: "14px", color: "#999" }}>{range}</p>
                 </div>
                 <div className="container--detail">
                   <ExpDetailHeader

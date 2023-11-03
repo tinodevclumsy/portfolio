@@ -18,10 +18,20 @@ export const StyledHeader = styled.header`
       -webkit-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.1);
       box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.1);
     `}
+  @media (max-width: 768px) {
+    ${props =>
+      props.open &&
+      css`
+        background-color: transparent !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+      `}
+  }
 `
 
 export const HeaderContainer = styled.div`
   height: 100px;
+  z-index: 100;
 `
 
 export const Menu = styled.ul`
@@ -76,4 +86,13 @@ export const HeaderOverlay = styled.div`
   width: 100%;
   height: 100%;
   z-index: -1;
+  transition: background 0.3s;
+  @media (max-width: 768px) {
+    ${props =>
+      props.open &&
+      css`
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      `}
+  }
 `
