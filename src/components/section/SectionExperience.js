@@ -16,7 +16,7 @@ import {
   Title,
 } from "../styled/StyledExperience"
 
-export default function Experience() {
+const Experience = () => {
   const { exp } = useStaticQuery(graphql`
     {
       exp: allMarkdownRemark(
@@ -174,6 +174,8 @@ export default function Experience() {
     </div>
   )
 }
+
+export default Experience
 
 /* <div className="container--external mb-2 flex">
               <LinkButton

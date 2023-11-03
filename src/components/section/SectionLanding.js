@@ -44,7 +44,7 @@ const CircleSecond = styled.div`
   top: -35%;
 `
 
-export default function Landing() {
+const Landing = () => {
   return (
     <div className="container--section container--section-landing section-landing relative h-screen flex justify-center items-center">
       <div className="container flex flex-col">
@@ -85,3 +85,5 @@ export default function Landing() {
     </div>
   )
 }
+
+export default React.memo(Landing)

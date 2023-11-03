@@ -14,7 +14,7 @@ const ContactIcon = styled.div`
   background-color: var(--primary-color);
   margin: 40px auto;
 `
-export default function Contact() {
+const Contact = () => {
   return (
     <div id="contact">
       <div className="container--section container--section-contact pb-20">
@@ -41,3 +41,5 @@ export default function Contact() {
     </div>
   )
 }
+
+export default React.memo(Contact)

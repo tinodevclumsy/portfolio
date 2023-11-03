@@ -1,7 +1,7 @@
 import React from "react"
 import Button from '../common/Button'
 
-export default function About() {
+function About() {
   return (
     <div id="about">
       <div className="container--section container--section-about py-20">
@@ -24,3 +24,5 @@ export default function About() {
     </div>
   )
 }
+
+export default React.memo(About)

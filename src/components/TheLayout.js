@@ -2,7 +2,7 @@ import React from "react"
 import Header from "./TheHeader"
 import Footer from "./TheFooter"
 
-export default function Layout({ children }) {
+const Layout = ({ children }) => {
   return (
     <div className="layout">
       <Header />
@@ -11,3 +11,5 @@ export default function Layout({ children }) {
     </div>
   )
 }
+
+export default Layout

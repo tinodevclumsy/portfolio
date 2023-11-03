@@ -18,7 +18,7 @@ const SkillItem = styled.div`
   }
 `
 
-export default function About() {
+const About = () => {
   const { skills } = useStaticQuery(graphql`
     {
       skills: allMarkdownRemark(
@@ -46,7 +46,11 @@ export default function About() {
           {skills.edges.map((item, index) => {
             return (
               <SkillItem key={`skill-${index}`} className="flex flex-col">
-                <Icon className="text-white" iconName={item.node.frontmatter.icon} size="3x"/>
+                <Icon
+                  className="text-white"
+                  iconName={item.node.frontmatter.icon}
+                  size="3x"
+                />
                 <span className="mt-2">{item.node.frontmatter.title}</span>
               </SkillItem>
             )
@@ -56,3 +60,5 @@ export default function About() {
     </div>
   )
 }
+
+export default React.memo(About)

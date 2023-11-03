@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useMemo } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import {
   StyledHeader,
@@ -10,7 +10,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 
-export default function Header() {
+const Header = () => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -26,17 +26,22 @@ export default function Header() {
     `
   )
 
+  const menuLinks = useMemo(
+    () => site.siteMetadata.menuLinks,
+    [site.siteMetadata.menuLinks]
+  )
+
   const [isSticky, setSticky] = useState(false)
   const [isMenuOpen, setMenuOpen] = useState(false)
-  const updateScroll = () => {
-    requestAnimationFrame(() => {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop
-      const sticky = scrollTop > 0
-      setSticky(sticky);
-    })
-  }
 
   useEffect(() => {
+    const updateScroll = () => {
+      requestAnimationFrame(() => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop
+        const sticky = scrollTop > 0
+        setSticky(sticky)
+      })
+    }
     window.addEventListener("scroll", updateScroll)
 
     return () => {
@@ -57,7 +62,7 @@ export default function Header() {
               size="lg"
             />
             <Menu className="menu--list-top flex md:block" open={isMenuOpen}>
-              {site.siteMetadata.menuLinks.map((menu, i) => {
+              {menuLinks.map((menu, i) => {
                 return (
                   <li key={i} className="menu--item inline-block mx-3.5">
                     <MenuItem
@@ -78,3 +83,5 @@ export default function Header() {
     </>
   )
 }
+
+export default Header
