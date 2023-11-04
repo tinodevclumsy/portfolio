@@ -51,7 +51,7 @@ const Header = () => {
 
   return (
     <>
-      <StyledHeader $sticky={isSticky} open={isMenuOpen} className="header">
+      <StyledHeader $sticky={isSticky} open={isMenuOpen}>
         <HeaderContainer className="container flex justify-between items-center relative">
           <div></div>
           <div className="flex items-center">

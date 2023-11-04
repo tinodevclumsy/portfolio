@@ -18,17 +18,35 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
-        {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap"
-          rel="stylesheet"
-        /> */}
+        <link rel="icon" type="image/png" href="./favicon.ico" />
         <title>Seungjun Lee - Front end Developer in metro Vancouver</title>
         <meta
           name="description"
           content="Welcome to Seungjun's portfolio website!"
         ></meta>
+        <meta name="image" content="./meta-image.png" />
+
+        <meta
+          property="og:description"
+          content="Welcome to Seungjun's portfolio website!"
+        />
+        <meta property="og:image" content="./meta-image.png" />
+        <meta
+          property="og:url"
+          content="https://tinodevclumsy.github.io/portfolio"
+        />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Seungjun Lee - Front end Developer in metro Vancouver"
+        />
+        <meta
+          name="twitter:description"
+          content="Welcome to Seungjun's portfolio website!"
+        />
+        <meta name="twitter:image" content="./meta-image.png" />
       </Helmet>
       <Layout>
         <GlobalStyle />

@@ -4,11 +4,12 @@ export const Title = styled.h2`
   position: relative;
   margin-bottom: 50px;
   font-weight: 700;
+  font-family: var(--font);
   &::before {
     content: "";
     width: 25px;
     height: 5px;
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     position: absolute;
     top: -20px;
     left: 50%;
@@ -34,7 +35,7 @@ export const SkillBadge = styled.div`
   border-radius: 5px;
   margin-right: 3px;
   margin-bottom: 3px;
-  /* background-color: var(--primary-color); */
+  /* background-color: var(--primary); */
   background-color: #333;
   color: #fff;
   font-size: 14px;
@@ -63,9 +64,9 @@ export const ImageOverlay = styled.div`
 
 export const LinkButton = styled.a`
   display: inline-block;
-  color: var(--primary-color);
+  color: var(--primary);
   padding: 5px 10px;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--primary);
   text-align: center;
   font-size: 14px;
   border-radius: 5px;
@@ -73,7 +74,7 @@ export const LinkButton = styled.a`
   transition: 0.2s ease-in-out all;
 
   &:hover {
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     color: #fff;
   }
 `
@@ -86,7 +87,7 @@ export const ExpDetailHeader = styled.span`
     position: absolute;
     width: 100vw;
     top: 50%;
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     height: 1px;
     left: calc(100% + 15px);
     -webkit-transition: 0.2s ease-in-out all;

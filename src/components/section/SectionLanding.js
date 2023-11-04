@@ -2,6 +2,7 @@ import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
 import styled from "styled-components"
+import PrimaryText from "../common/PrimaryText"
 
 const SnsContainer = styled.div`
   bottom: 0;
@@ -48,8 +49,8 @@ const Landing = () => {
   return (
     <div className="container--section container--section-landing section-landing relative h-screen flex justify-center items-center">
       <div className="container flex flex-col">
-        <h1 className="header--title text-5xl md:text-8xl primary-text test">
-          SEUNGJUN LEE
+        <h1 className="header--title text-5xl md:text-8xl">
+          <PrimaryText text="SEUNGJUN LEE" />
         </h1>
 
         <h2 className="text-3xl font-light md:text-6xl">FRONT-END DEVELOPER</h2>

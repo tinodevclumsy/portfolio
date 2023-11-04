@@ -1,27 +1,18 @@
 import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
-/* *,
-:after,
-:before {
-  font-family: "Schoolbell", cursive;
-} */
-
 * {
   font-family: 'Montserrat', sans-serif;
 }
 :root {
-  /* --primary-color: #66a1ee; */
-  --primary-color: #e7c2bf;
-}
-.test {
-  font-family: 'Playfair Display', serif;
+  --primary: #e7c2bf;
+  --primary: #e7c2bf;
+  --secondary: #bc9534;
+  --background: #1e2f56;
+  --font: 'Playfair Display', serif;
 }
 .primary-text {
-  color: var(--primary-color);
-}
-.primary-bg {
-  background-color: var(--primary-color);
+  color: var(--primary);
 }
 .container {
   width: 100%;
@@ -37,7 +28,6 @@ html {
   position: relative;
   font-size: 16px;
   scroll-behavior: smooth;
-  background-color: #1E2F56;
   color: #FFFFE0;
   overflow-x: hidden;
 }
@@ -59,7 +49,6 @@ ul {
   padding-left: 0;
   list-style-type: none;
 }
-
 `
 
 export default GlobalStyle

@@ -9,11 +9,10 @@ export const StyledHeader = styled.header`
   background-color: transparent;
   -webkit-transition: 0.3s ease-in-out all;
   transition: 0.3s ease-in-out all;
-
   ${props =>
     props.$sticky &&
     css`
-      background-color: #1e2f56;
+      background-color: var(--background);
       -webkit-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.1);
       box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.1);
     `}
@@ -72,7 +71,7 @@ export const MenuItem = styled.a`
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     width: 0;
-    background: var(--primary-color);
+    background: var(--primary);
     -webkit-transition: 0.2s ease-in-out all;
     transition: 0.2s ease-in-out all;
   }

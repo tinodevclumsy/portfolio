@@ -11,7 +11,7 @@ const ContactIcon = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: var(--primary-color);
+  background-color: var(--primary);
   margin: 40px auto;
 `
 const Contact = () => {
