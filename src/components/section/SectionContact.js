@@ -17,7 +17,7 @@ const ContactIcon = styled.div`
 const Contact = () => {
   return (
     <div id="contact">
-      <div className="container--section container--section-contact pb-20">
+      <div className="container--section container--section-contact mt-20 pb-20">
         <div className="container">
           <div className="container--content m-auto text-center">
             <h3 className="title-contact max-w-3xl text-2xl md:text-3xl mb-2 mx-auto">

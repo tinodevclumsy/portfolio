@@ -28,6 +28,7 @@ html {
   position: relative;
   font-size: 16px;
   scroll-behavior: smooth;
+  background-color: var(--background);
   color: #FFFFE0;
   overflow-x: hidden;
 }

@@ -47,6 +47,13 @@ module.exports = {
         path: `${__dirname}/content/work`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `project`,
+        path: `${__dirname}/content/project`,
+      },
+    },
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-google-gtag`,

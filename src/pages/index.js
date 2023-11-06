@@ -6,6 +6,7 @@ import Landing from "../components/section/SectionLanding"
 import About from "../components/section/SectionAbout"
 import Skill from "../components/section/SectionSkill"
 import Experience from "../components/section/SectionExperience"
+import Project from "../components/section/SectinoProject"
 import Contact from "../components/section/SectionContact"
 
 export default function Home() {
@@ -55,6 +56,7 @@ export default function Home() {
           <About />
           <Skill />
           <Experience />
+          <Project />
           <Contact />
         </section>
       </Layout>
