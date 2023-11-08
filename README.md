@@ -1,1 +1,1 @@
-(/static/meta-image.png)
+![Seungjun Lee's Webiste](/static/meta-image.png)
