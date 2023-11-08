@@ -1,1 +1,1 @@
-(./meta-image.png)
+(/static/meta-image.png)
