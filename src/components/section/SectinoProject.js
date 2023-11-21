@@ -60,20 +60,13 @@ const Project = () => {
             return (
               <Item key={`project-${index}`}>
                 {mainImage ? (
-                  <GatsbyImage image={getImage(mainImage)} alt="Seungjun Lee"></GatsbyImage>
+                  <GatsbyImage
+                    image={getImage(mainImage)}
+                    alt={`Seungjun Lee Front-end Developer in Metro Vancouver - project${index}`}
+                  ></GatsbyImage>
                 ) : (
                   <div></div>
                 )}
-                {/* {img.map((imgItem, imgIndex) => {
-                  const image = getImage(imgItem)
-                  return (
-                    <ImageContainer key={`image-${index}-${imgIndex}`}>
-                      <GatsbyImage image={image} alt={title} className="img" />
-
-                      <ImageOverlay />
-                    </ImageContainer>
-                  )
-                })} */}
                 <div style={{ padding: "35px" }}>
                   <h3 className="text-2xl">{title}</h3>
                   <p style={{ color: "#999" }}>{description}</p>
@@ -111,9 +104,7 @@ const Project = () => {
                             iconName="fa-square-github"
                             size="lg"
                           />
-                          <span className="ml-2">
-                            View
-                          </span>
+                          <span className="ml-2">View</span>
                         </Link>
                       )
                     })}

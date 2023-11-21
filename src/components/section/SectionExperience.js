@@ -1,17 +1,18 @@
 import React, { useRef } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
-  // faUpRightFromSquare,
   faChevronRight,
+  faUpRightFromSquare,
 } from "@fortawesome/free-solid-svg-icons"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Link from "../common/Link"
+import Icon from "../common/Icon"
 import {
   ExperienceListItem,
   SkillBadge,
   ImageContainer,
   ImageOverlay,
-  // LinkButton,
   ExpDetailHeader,
   Title,
 } from "../styled/StyledExperience"
@@ -32,6 +33,7 @@ const Experience = () => {
               range
               stack
               duty
+              link
               img {
                 childImageSharp {
                   gatsbyImageData(
@@ -71,7 +73,7 @@ const Experience = () => {
         <Title className="text-4xl text-center">WORK</Title>
         <div className="inner-container relative flex flex-wrap items-center mb-20">
           {exp.edges.map((item, index) => {
-            const { title, company, duty, location, range, stack, img } =
+            const { title, company, duty, location, range, stack, img, link } =
               item.node.frontmatter
             return (
               <div
@@ -85,6 +87,32 @@ const Experience = () => {
                   <p style={{ fontSize: "14px", color: "#999" }}>{range}</p>
                 </div>
                 <div className="container--detail">
+                  <div
+                    style={{
+                      display: "flex",
+                      flexWrap: "wrap",
+                      marginBottom: "15px",
+                    }}
+                  >
+                    {link.map((git, linkIndex) => {
+                      return (
+                        <Link
+                          className="mr-2"
+                          href={git}
+                          target="_blank"
+                          rel="noreferrer"
+                          key={`link-${index}-${linkIndex}`}
+                        >
+                          <FontAwesomeIcon
+                            icon={faUpRightFromSquare}
+                            size="sm"
+                            className="mr-2"
+                          />
+                          <span className="ml-2">Visit</span>
+                        </Link>
+                      )
+                    })}
+                  </div>
                   <ExpDetailHeader
                     onClick={() => onRefHeaderClick("detail", index)}
                   >
@@ -154,7 +182,7 @@ const Experience = () => {
                         <ImageContainer key={`image-${index}-${imgIndex}`}>
                           <GatsbyImage
                             image={image}
-                            alt={title}
+                            alt={`Seungjun Lee Front-end Developer in Metro Vancouver - ${title}${imgIndex}`}
                             className="img"
                           />
 
@@ -174,22 +202,3 @@ const Experience = () => {
 }
 
 export default Experience
-
-/* <div className="container--external mb-2 flex">
-              <LinkButton
-                className="mr-1"
-                href="https://onikon.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FontAwesomeIcon icon={faUpRightFromSquare} size="sm" /> Website
-              </LinkButton>
-              <LinkButton
-                href="https://apps.apple.com/ca/app/onikon/id6444296112"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FontAwesomeIcon icon={faUpRightFromSquare} size="sm" />{" "}
-                Application
-              </LinkButton>
-            </div> */

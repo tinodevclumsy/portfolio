@@ -1,18 +1,19 @@
 ---
-order: '2'
-title: 'Front-end Developer'
-company: 'Vinple'
-location: 'Vancouver, British Columbia, Canada'
-range: 'Dec 2018 - Jul 2020'
-stack: 
+order: "2"
+title: "Front-end Developer"
+company: "Vinple"
+location: "Vancouver, British Columbia, Canada"
+range: "Dec 2018 - Jul 2020"
+stack:
   - React.js
   - React Native
   - MobX
-duty: 
+duty:
   - Worked in a team developing a communication app for students in BC
-  - Developed and maintained web app with React and mobile application with React Native 
+  - Developed and maintained web app with React and mobile application with React Native
   - Collaborated in agile environment based on Git and Jira
-img: 
-  - './images/portfolio-base.webp'
-site: 'https://base.town/'
+img:
+  - "./images/portfolio-base.webp"
+link:
+  - "https://base.town/"
 ---

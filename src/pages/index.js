@@ -20,16 +20,16 @@ export default function Home() {
           rel="stylesheet"
         />
         <link rel="icon" type="image/png" href="./favicon.ico" />
-        <title>Seungjun Lee - Front end Developer in metro Vancouver</title>
+        <title>Seungjun Lee - Front-end Developer in Metro Vancouver</title>
         <meta
           name="description"
-          content="Welcome to Seungjun's portfolio website!"
+          content="A skilled and dedicated front end developer. My expertise lies in front-end web development, with proficiency in HTML, CSS, JavaScript, Vue.js, and React.js and strong interests in mobile development as well."
         ></meta>
         <meta name="image" content="./meta-image.png" />
 
         <meta
           property="og:description"
-          content="Welcome to Seungjun's portfolio website!"
+          content="A skilled and dedicated front end developer. My expertise lies in front-end web development, with proficiency in HTML, CSS, JavaScript, Vue.js, and React.js and strong interests in mobile development as well."
         />
         <meta property="og:image" content="./meta-image.png" />
         <meta
@@ -41,11 +41,11 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Seungjun Lee - Front end Developer in metro Vancouver"
+          content="Seungjun Lee - Front-end Developer in Metro Vancouver"
         />
         <meta
           name="twitter:description"
-          content="Welcome to Seungjun's portfolio website!"
+          content="A skilled and dedicated front end developer. My expertise lies in front-end web development, with proficiency in HTML, CSS, JavaScript, Vue.js, and React.js and strong interests in mobile development as well."
         />
         <meta name="twitter:image" content="./meta-image.png" />
       </Helmet>
