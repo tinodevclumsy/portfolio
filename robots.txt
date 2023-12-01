@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://tinodevclumsy.github.io/portfolio/sitemap-index.xml
+Sitemap: https://tinodevclumsy.github.io/sitemap-index.xml
 Host: https://tinodevclumsy.github.io
