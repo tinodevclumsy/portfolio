@@ -22,6 +22,9 @@ img:
   - "./images/portfolio-onikon-02.webp"
   - "./images/portfolio-onikon-03.webp"
   - "./images/portfolio-onikon-04.webp"
+  - "./images/portfolio-onikon-05.webp"
+  # - "./images/portfolio-onikon-06.webp"
+  - "./images/portfolio-onikon-07.webp"
 link:
   - "https://apps.apple.com/ca/app/onikon/id6444296112"
   - "https://onikon.com/"

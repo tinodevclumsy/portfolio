@@ -11,19 +11,19 @@ module.exports = {
     menuLinks: [
       {
         name: "About",
-        link: "#about",
+        link: "/#about",
       },
       {
         name: "Skill",
-        link: "#skill",
+        link: "/#skill",
       },
       {
         name: "Work/Project",
-        link: "#work-project",
+        link: "/#work-project",
       },
       {
         name: "Contact",
-        link: "#contact",
+        link: "/#contact",
       },
     ],
   },
@@ -54,7 +54,32 @@ module.exports = {
         path: `${__dirname}/content/project`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {

@@ -8,6 +8,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
+import Button from "../common/Button"
 
 const Project = () => {
   const { project } = useStaticQuery(graphql`
@@ -24,6 +25,7 @@ const Project = () => {
               description
               url
               github
+              path
               img {
                 childImageSharp {
                   gatsbyImageData(
@@ -41,8 +43,6 @@ const Project = () => {
     }
   `)
 
-  console.log(project)
-
   return (
     <div
       id="work-project"
@@ -52,7 +52,7 @@ const Project = () => {
         <Title className="text-4xl text-center">PROJECT</Title>
         <div className="inner-container flex flex-wrap">
           {project.edges.map((item, index) => {
-            const { title, stack, description, url, img, github } =
+            const { title, stack, description, url, img, github, path } =
               item.node.frontmatter
             const mainImage = img.length && img[0]
             console.log(stack)
@@ -63,13 +63,16 @@ const Project = () => {
                   <GatsbyImage
                     image={getImage(mainImage)}
                     alt={`Seungjun Lee Front-end Developer in Metro Vancouver - project${index}`}
+                    style={{ height: "320px" }}
                   ></GatsbyImage>
                 ) : (
                   <div></div>
                 )}
                 <div style={{ padding: "35px" }}>
                   <h3 className="text-2xl">{title}</h3>
-                  <p style={{ color: "#999" }}>{description}</p>
+                  <p style={{ color: "#999", fontSize: "14px" }}>
+                    {description}
+                  </p>
                   <div className="flex flex-wrap mt-4">
                     {stack.map((stackItem, stackIndex) => {
                       return <SkillBadge>{stackItem}</SkillBadge>
@@ -108,6 +111,14 @@ const Project = () => {
                         </Link>
                       )
                     })}
+                  </div>
+
+                  <div className="text-center">
+                    <Button
+                      link={path}
+                      message="View Details"
+                      additionalStyles={{ fontSize: "14px" }}
+                    />
                   </div>
                 </div>
               </Item>

@@ -20,6 +20,10 @@ const CustomButton = styled.a`
   }
 `
 
-const Button = ({ message, link }) => <CustomButton href={link}>{message}</CustomButton>
+const Button = ({ message, link, additionalStyles }) => (
+  <CustomButton href={link} style={additionalStyles}>
+    {message}
+  </CustomButton>
+)
 
 export default Button

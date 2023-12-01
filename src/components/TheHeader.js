@@ -9,6 +9,12 @@ import {
 } from "./styled/StyledHeader"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
+import styled from "styled-components"
+
+const Logo = styled.a`
+  font-family: var(--font);
+  color: #fff;
+`
 
 const Header = () => {
   const { site } = useStaticQuery(
@@ -53,7 +59,9 @@ const Header = () => {
     <>
       <StyledHeader $sticky={isSticky} open={isMenuOpen}>
         <HeaderContainer className="container flex justify-between items-center relative">
-          <div></div>
+          <div>
+            <Logo href="/">SEUNGJUN LEE.</Logo>
+          </div>
           <div className="flex items-center">
             <FontAwesomeIcon
               onClick={() => setMenuOpen(prevIsMenuOpen => !prevIsMenuOpen)}

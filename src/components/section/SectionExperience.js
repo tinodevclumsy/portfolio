@@ -7,7 +7,6 @@ import {
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Link from "../common/Link"
-import Icon from "../common/Icon"
 import {
   ExperienceListItem,
   SkillBadge,
@@ -184,6 +183,7 @@ const Experience = () => {
                             image={image}
                             alt={`Seungjun Lee Front-end Developer in Metro Vancouver - ${title}${imgIndex}`}
                             className="img"
+                            style={{ height: "100%" }}
                           />
 
                           <ImageOverlay />

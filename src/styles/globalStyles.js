@@ -6,7 +6,6 @@ const GlobalStyle = createGlobalStyle`
 }
 :root {
   --primary: #e7c2bf;
-  --primary: #e7c2bf;
   --secondary: #bc9534;
   --background: #1e2f56;
   --font: 'Playfair Display', serif;
