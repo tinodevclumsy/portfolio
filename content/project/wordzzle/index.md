@@ -13,7 +13,7 @@ img:
 url: "https://genuine-biscuit-785b86.netlify.app"
 github:
   - "https://github.com/tinodevclumsy/wordzzle-frontend"
-path: "/project/wordzzle/"
+path: "/portfolio/project/wordzzle/"
 ---
 
 ![Seungjun Lee's Wordzzle](./images/seungjun-lee-front-end-project-main.webp)

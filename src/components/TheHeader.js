@@ -60,7 +60,7 @@ const Header = () => {
       <StyledHeader $sticky={isSticky} open={isMenuOpen}>
         <HeaderContainer className="container flex justify-between items-center relative">
           <div>
-            <Logo href="/">SEUNGJUN LEE.</Logo>
+            <Logo href="/portfolio">SEUNGJUN LEE.</Logo>
           </div>
           <div className="flex items-center">
             <FontAwesomeIcon

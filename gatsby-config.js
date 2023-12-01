@@ -11,19 +11,19 @@ module.exports = {
     menuLinks: [
       {
         name: "About",
-        link: "/#about",
+        link: "/portfolio/#about",
       },
       {
         name: "Skill",
-        link: "/#skill",
+        link: "/portfolio/#skill",
       },
       {
         name: "Work/Project",
-        link: "/#work-project",
+        link: "/portfolio/#work-project",
       },
       {
         name: "Contact",
-        link: "/#contact",
+        link: "/portfolio/#contact",
       },
     ],
   },
