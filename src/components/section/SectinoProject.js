@@ -115,7 +115,7 @@ const Project = () => {
 
                   <div className="text-center">
                     <Button
-                      link={path}
+                      link={`/portfolio/${path}`}
                       message="View Details"
                       additionalStyles={{ fontSize: "14px" }}
                     />

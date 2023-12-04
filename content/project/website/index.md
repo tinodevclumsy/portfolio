@@ -12,7 +12,7 @@ img:
 url: "https://tinodevclumsy.github.io/portfolio/"
 github:
   - "https://github.com/tinodevclumsy/portfolio"
-path: "/portfolio/project/personal-website/"
+path: "/project/personal-website/"
 ---
 
 ![Seungjun Lee's Webiste](./images/main.webp)
