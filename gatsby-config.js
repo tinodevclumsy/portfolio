@@ -6,24 +6,47 @@
 
 module.exports = {
   pathPrefix: "/portfolio",
+  // siteMetadata: {
+  //   title: `SEUNGJUN LEE`,
+  //   author: {
+  //     name: `SEUNGJUN LEE`,
+  //     summary: `FRONT-END DEVELOPER BASED IN METRO VANCOUVER`,
+  //   },
+  //   description: `SEUNGJUN LEE's website`,
+  //   siteUrl: `https://tinodevclumsy.github.io/`,
+  //   // social: {
+  //   //   twitter: `kylemathews`,
+  //   // },
+  // },
   siteMetadata: {
+    title: "Seungjun Lee - Front-end Developer in Metro Vancouver",
+    description: "A skilled and dedicated front end developer from South Korea and curretly in Metro Vancouver. My expertise lies in front-end web development, with proficiency in HTML, CSS, JavaScript, Vue.js, and React.js and strong interests in mobile development as well.",
     siteUrl: "https://tinodevclumsy.github.io/portfolio",
     menuLinks: [
       {
         name: "About",
         link: "/portfolio/#about",
+        external: false,
       },
       {
         name: "Skill",
         link: "/portfolio/#skill",
+        external: false,
       },
       {
         name: "Work/Project",
         link: "/portfolio/#work-project",
+        external: false,
       },
       {
         name: "Contact",
         link: "/portfolio/#contact",
+        external: false,
+      },
+      {
+        name: "Blog",
+        link: "/",
+        external: true,
       },
     ],
   },
