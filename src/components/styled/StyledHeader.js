@@ -56,12 +56,6 @@ export const MenuItem = styled.a`
   position: relative;
   display: inline-block;
 
-  &:hover {
-    &::before {
-      width: 100%;
-    }
-  }
-
   &:before {
     height: 2px;
     content: "";
@@ -75,6 +69,26 @@ export const MenuItem = styled.a`
     -webkit-transition: 0.2s ease-in-out all;
     transition: 0.2s ease-in-out all;
   }
+
+  ${props =>
+    props.external
+      ? css`
+          border: 1px solid var(--primary);
+          padding: 5px 10px;
+          border-radius: 5px;
+          -webkit-transition: 0.2s ease-in-out all;
+          transition: 0.2s ease-in-out all;
+          &:hover {
+            background-color: var(--primary);
+          }
+        `
+      : css`
+          &:hover {
+            &::before {
+              width: 100%;
+            }
+          }
+        `}
 `
 
 export const HeaderOverlay = styled.div`

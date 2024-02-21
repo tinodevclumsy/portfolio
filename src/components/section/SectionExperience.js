@@ -128,7 +128,7 @@ const Experience = () => {
                     style={{ maxHeight: "0px" }}
                   >
                     {duty.map((dutyItem, dutyIndex) => (
-                      <ExperienceListItem key={`duty-${dutyIndex}`}>
+                      <ExperienceListItem key={`duty-${index}-${dutyIndex}`}>
                         {dutyItem}
                       </ExperienceListItem>
                     ))}
@@ -152,7 +152,7 @@ const Experience = () => {
                     style={{ maxHeight: "0px" }}
                   >
                     {stack.map((stackItem, stackIndex) => (
-                      <SkillBadge key={`stack-${stackIndex}`}>
+                      <SkillBadge key={`stack-${index}-${stackIndex}`}>
                         {stackItem}
                       </SkillBadge>
                     ))}

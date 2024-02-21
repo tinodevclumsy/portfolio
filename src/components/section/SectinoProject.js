@@ -55,7 +55,6 @@ const Project = () => {
             const { title, stack, description, url, img, github, path } =
               item.node.frontmatter
             const mainImage = img.length && img[0]
-            console.log(stack)
 
             return (
               <Item key={`project-${index}`}>
@@ -75,7 +74,11 @@ const Project = () => {
                   </p>
                   <div className="flex flex-wrap mt-4">
                     {stack.map((stackItem, stackIndex) => {
-                      return <SkillBadge>{stackItem}</SkillBadge>
+                      return (
+                        <SkillBadge key={`skill-${index}-${stackIndex}`}>
+                          {stackItem}
+                        </SkillBadge>
+                      )
                     })}
                   </div>
                   <div className="flex flex-wrap mt-2">

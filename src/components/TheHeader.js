@@ -25,6 +25,7 @@ const Header = () => {
             menuLinks {
               name
               link
+              external
             }
           }
         }
@@ -70,11 +71,15 @@ const Header = () => {
               size="lg"
             />
             <Menu className="menu--list-top flex md:block" open={isMenuOpen}>
-              {menuLinks.map((menu, i) => {
+              {menuLinks.map((menu, index) => {
                 return (
-                  <li key={i} className="menu--item inline-block mx-3.5">
+                  <li
+                    key={`header-menu-${index}`}
+                    className="menu--item inline-block mx-3.5"
+                  >
                     <MenuItem
-                      className="py-5 text-white uppercase"
+                      className="py-5 text-white uppercase "
+                      external={menu.external}
                       href={menu.link}
                       onClick={() => setMenuOpen(false)}
                     >
