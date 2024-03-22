@@ -6,21 +6,10 @@
 
 module.exports = {
   pathPrefix: "/portfolio",
-  // siteMetadata: {
-  //   title: `SEUNGJUN LEE`,
-  //   author: {
-  //     name: `SEUNGJUN LEE`,
-  //     summary: `FRONT-END DEVELOPER BASED IN METRO VANCOUVER`,
-  //   },
-  //   description: `SEUNGJUN LEE's website`,
-  //   siteUrl: `https://tinodevclumsy.github.io/`,
-  //   // social: {
-  //   //   twitter: `kylemathews`,
-  //   // },
-  // },
   siteMetadata: {
     title: "Seungjun Lee - Front-end Developer in Metro Vancouver",
-    description: "A skilled and dedicated front end developer from South Korea and curretly in Metro Vancouver. My expertise lies in front-end web development, with proficiency in HTML, CSS, JavaScript, Vue.js, and React.js and strong interests in mobile development as well.",
+    description:
+      "A skilled and dedicated front end developer from South Korea and curretly in Metro Vancouver. My expertise lies in front-end web development, with proficiency in HTML, CSS, JavaScript, Vue.js, and React.js and strong interests in mobile development as well.",
     siteUrl: "https://tinodevclumsy.github.io/portfolio",
     menuLinks: [
       {
@@ -53,9 +42,50 @@ module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-postcss",
-    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        output: "/",
+        query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage(
+            filter: {
+              path: { regex: "/^(?!/404/|/404.html|/dev-404-page/)/" }
+            }
+          ) {
+            nodes {
+              path
+            }
+          }
+        }
+        `,
+        resolvePages: ({ allSitePage: { nodes: allPages } }) => {
+          return allPages.map(page => {
+            return { ...page }
+          })
+        },
+        serialize: ({ path }) => {
+          return {
+            url: path,
+            changefreq: "weekly",
+            priority: 0.7,
+          }
+        },
+      },
+    },
     "gatsby-plugin-robots-txt",
     "gatsby-plugin-styled-components",
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `https://tinodevclumsy.github.io/`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
