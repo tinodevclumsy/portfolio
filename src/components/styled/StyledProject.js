@@ -12,3 +12,10 @@ export const Item = styled.div`
     margin: 10px 0;
   }
 `
+
+export const ProjectThumbnail = styled.div`
+  padding-bottom: 52%;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+`

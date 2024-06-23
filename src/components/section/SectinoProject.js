@@ -3,9 +3,9 @@ import Title from "../common/Title"
 import SkillBadge from "../common/Badge"
 import Link from "../common/Link"
 import Icon from "../common/Icon"
-import { Item } from "../styled/StyledProject"
+import { Item, ProjectThumbnail } from "../styled/StyledProject"
 import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { getImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
 import Button from "../common/Button"
@@ -56,14 +56,18 @@ const Project = () => {
               item.node.frontmatter
             const mainImage = img.length && img[0]
 
+            console.log(getImage(mainImage))
+
             return (
               <Item key={`project-${index}`}>
                 {mainImage ? (
-                  <GatsbyImage
-                    image={getImage(mainImage)}
-                    alt={`Seungjun Lee Front-end Developer in Metro Vancouver - project${index}`}
-                    style={{ height: "320px" }}
-                  ></GatsbyImage>
+                  <ProjectThumbnail
+                    style={{
+                      background: `url(${
+                        getImage(mainImage).images.fallback.src
+                      })`,
+                    }}
+                  ></ProjectThumbnail>
                 ) : (
                   <div></div>
                 )}
@@ -82,19 +86,21 @@ const Project = () => {
                     })}
                   </div>
                   <div className="flex flex-wrap mt-2">
-                    <Link
-                      className="mr-1"
-                      href={url}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <FontAwesomeIcon
-                        icon={faUpRightFromSquare}
-                        size="sm"
-                        className="mr-2"
-                      />
-                      Visit
-                    </Link>
+                    {url && (
+                      <Link
+                        className="mr-1"
+                        href={url}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <FontAwesomeIcon
+                          icon={faUpRightFromSquare}
+                          size="sm"
+                          className="mr-2"
+                        />
+                        Visit
+                      </Link>
+                    )}
 
                     {github.map((git, gitIndex) => {
                       return (
