@@ -21,9 +21,9 @@ path: "/project/statify/"
 
 A project using the Spotify API to generate a topster from personal playlists, visualizing favorite albums or songs in a grid format.
 
-### URL:
+### Github URL:
 
-<https://tinodevclumsy.github.io/statify/>
+<https://github.com/tinodevclumsy/statify/>
 
 ### Pages
 

@@ -20,11 +20,6 @@ path: "/project/wordzzle/"
 
 <https://genuine-biscuit-785b86.netlify.app/>
 
-<!-- ![Seungjun Lee's Wordzzle](./images/seungjun-lee-front-end-project-main.webp) -->
-
-<!-- <div class="thumbnail">
-</div> -->
-
 ### Description
 
 The project featured an intuitive frontend with CRUD operations, a backend for data management, secure user authentication using JWT, and interactive quizzes as key features
