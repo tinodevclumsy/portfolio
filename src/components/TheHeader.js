@@ -6,15 +6,10 @@ import {
   Menu,
   MenuItem,
   HeaderOverlay,
-} from "./styled/StyledHeader"
+  Logo,
+} from "./TheHeader.styled"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
-import styled from "styled-components"
-
-const Logo = styled.a`
-  font-family: var(--font);
-  color: #fff;
-`
 
 const Header = () => {
   const { site } = useStaticQuery(

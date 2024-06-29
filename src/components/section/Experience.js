@@ -14,7 +14,7 @@ import {
   ImageOverlay,
   ExpDetailHeader,
   Title,
-} from "../styled/StyledExperience"
+} from "./Experience.styled"
 
 const Experience = () => {
   const { exp } = useStaticQuery(graphql`

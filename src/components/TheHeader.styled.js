@@ -108,3 +108,8 @@ export const HeaderOverlay = styled.div`
       `}
   }
 `
+
+export const Logo = styled.a`
+  font-family: var(--font);
+  color: #fff;
+`

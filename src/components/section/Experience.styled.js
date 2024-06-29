@@ -97,4 +97,3 @@ export const ExpDetailHeader = styled.span`
     background-color: #fff;
   }
 `
-
