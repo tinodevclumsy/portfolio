@@ -1,6 +1,7 @@
 ---
 order: "2"
 title: "Statify"
+category: "projects"
 stack:
   - React
   - Context API

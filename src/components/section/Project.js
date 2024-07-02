@@ -4,45 +4,12 @@ import SkillBadge from "../common/Badge"
 import Link from "../common/Link"
 import Icon from "../common/Icon"
 import { Item, ProjectThumbnail } from "./Project.styled"
-import { useStaticQuery, graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
 import Button from "../common/Button"
 
-const Project = () => {
-  const { project } = useStaticQuery(graphql`
-    {
-      project: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/content/project/" } }
-        sort: { frontmatter: { order: ASC } }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              stack
-              description
-              url
-              github
-              path
-              img {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 1200
-                    placeholder: BLURRED
-                    formats: [WEBP]
-                  )
-                }
-              }
-            }
-            html
-          }
-        }
-      }
-    }
-  `)
-
+const Project = ({ projects }) => {
   return (
     <div
       id="work-project"
@@ -51,12 +18,10 @@ const Project = () => {
       <div className="container">
         <Title className="text-4xl text-center">PROJECT</Title>
         <div className="inner-container flex flex-wrap">
-          {project.edges.map((item, index) => {
+          {projects.map((item, index) => {
             const { title, stack, description, url, img, github, path } =
-              item.node.frontmatter
+              item.frontmatter
             const mainImage = img.length && img[0]
-
-            console.log(getImage(mainImage))
 
             return (
               <Item key={`project-${index}`}>

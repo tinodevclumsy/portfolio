@@ -4,7 +4,6 @@ import {
   faChevronRight,
   faUpRightFromSquare,
 } from "@fortawesome/free-solid-svg-icons"
-import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Link from "../common/Link"
 import {
@@ -16,40 +15,7 @@ import {
   Title,
 } from "./Experience.styled"
 
-const Experience = () => {
-  const { exp } = useStaticQuery(graphql`
-    {
-      exp: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/content/work/" } }
-        sort: { frontmatter: { order: ASC } }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              company
-              location
-              range
-              stack
-              duty
-              link
-              img {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 2940
-                    placeholder: BLURRED
-                    formats: [WEBP]
-                  )
-                }
-              }
-            }
-            html
-          }
-        }
-      }
-    }
-  `)
-
+const Experience = ({ exp }) => {
   const detailRefs = useRef([])
   const stackRefs = useRef([])
   const imageRefs = useRef([])
@@ -71,9 +37,9 @@ const Experience = () => {
       <div className="container">
         <Title className="text-4xl text-center">WORK</Title>
         <div className="inner-container relative flex flex-wrap items-center mb-20">
-          {exp.edges.map((item, index) => {
+          {exp.map((item, index) => {
             const { title, company, duty, location, range, stack, img, link } =
-              item.node.frontmatter
+              item.frontmatter
             return (
               <div
                 key={`work-${index}`}

@@ -1,6 +1,7 @@
 ---
 order: "1"
 title: "Personal Website"
+category: "projects"
 stack:
   - React
   - Gatsby

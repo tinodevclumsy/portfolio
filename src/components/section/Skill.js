@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 import Icon from "../common/Icon"
 
@@ -18,24 +17,7 @@ const SkillItem = styled.div`
   }
 `
 
-const About = () => {
-  const { skills } = useStaticQuery(graphql`
-    {
-      skills: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/content/skills/" } }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              icon
-            }
-            html
-          }
-        }
-      }
-    }
-  `)
+const About = ({ skills }) => {
   return (
     <div
       id="skill"
@@ -43,15 +25,15 @@ const About = () => {
     >
       <div className="container">
         <div className="inner-container flex flex-wrap justify-center">
-          {skills.edges.map((item, index) => {
+          {skills.map((item, index) => {
             return (
               <SkillItem key={`skill-${index}`} className="flex flex-col">
                 <Icon
                   className="text-white"
-                  iconName={item.node.frontmatter.icon}
+                  iconName={item.frontmatter.icon}
                   size="3x"
                 />
-                <span className="mt-2">{item.node.frontmatter.title}</span>
+                <span className="mt-2">{item.frontmatter.title}</span>
               </SkillItem>
             )
           })}

@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useMemo } from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import {
   StyledHeader,
   HeaderContainer,
@@ -11,26 +10,11 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 
-const Header = () => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            menuLinks {
-              name
-              link
-              external
-            }
-          }
-        }
-      }
-    `
-  )
+const Header = ({ site }) => {
 
   const menuLinks = useMemo(
-    () => site.siteMetadata.menuLinks,
-    [site.siteMetadata.menuLinks]
+    () => site.menuLinks,
+    [site.menuLinks]
   )
 
   const [isSticky, setSticky] = useState(false)

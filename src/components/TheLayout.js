@@ -6,10 +6,10 @@ import styled from "styled-components"
 const Container = styled.div`
   background-color: var(--background);
 `
-const Layout = ({ children }) => {
+const Layout = ({ site, children }) => {
   return (
     <Container className="relative z-0 layout">
-      <Header />
+      <Header site={site} />
       <div className="content">{children}</div>
       <Footer />
     </Container>

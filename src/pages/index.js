@@ -10,18 +10,24 @@ import Experience from "../components/section/Experience"
 import Project from "../components/section/Project"
 import Contact from "../components/section/Contact"
 
+import useMarkdownData from "../hooks/useMarkdownData"
+import useSiteData from "../hooks/useSiteData"
+
 export default function Home() {
+  const { exp, projects, skills } = useMarkdownData()
+  const site = useSiteData()
+
   return (
     <>
-      <Head />
-      <Layout>
+      <Head site={site} />
+      <Layout site={site}>
         <GlobalStyle />
         <section>
           <Landing />
           <About />
-          <Skill />
-          <Experience />
-          <Project />
+          <Skill skills={skills} />
+          <Experience exp={exp} />
+          <Project projects={projects} />
           <Contact />
         </section>
       </Layout>

@@ -1,6 +1,7 @@
 ---
 order: "1"
 title: "Front-end Developer"
+category: "exp"
 company: "ONIKON Creative Inc."
 location: "Surrey, British Columbia, Canada "
 range: "Aug 2020 - May 2023"

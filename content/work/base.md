@@ -1,6 +1,7 @@
 ---
 order: "2"
 title: "Front-end Developer"
+category: "exp"
 company: "Vinple"
 location: "Vancouver, British Columbia, Canada"
 range: "Dec 2018 - Jul 2020"

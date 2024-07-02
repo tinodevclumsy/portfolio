@@ -1,6 +1,7 @@
 ---
 order: "3"
 title: "Wordzzle"
+category: "projects"
 stack:
   - React
   - Redux
